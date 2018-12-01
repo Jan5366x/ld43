@@ -152,6 +152,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
+        type: 2}
+      propertyPath: Waves.Array.data[1].spawnWhenEmpty
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
+        type: 2}
+      propertyPath: Waves.Array.data[1].delay
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf, type: 2}
   m_IsPrefabAsset: 0

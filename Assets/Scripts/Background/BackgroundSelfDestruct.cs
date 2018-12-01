@@ -34,13 +34,23 @@ public class BackgroundSelfDestruct : MonoBehaviour
 
     public float GetRightBound()
     {
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         return transform.position.x + GetWidth();
     }
 
     public float GetWidth()
     {
-        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        return renderer.sprite.bounds.extents.x;
+        SpriteRenderer renderer;
+        renderer = GetComponent<SpriteRenderer>();
+        if (!renderer)
+        {
+            renderer = GetComponentInChildren<SpriteRenderer>();
+        }
+
+        if (renderer)
+        {
+            return renderer.sprite.bounds.extents.x;
+        }
+
+        return 0;
     }
 }
