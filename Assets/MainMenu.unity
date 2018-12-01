@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 579290591}
   - component: {fileID: 579290590}
   m_Layer: 5
-  m_Name: MenuButton
+  m_Name: HighscoreButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -440,6 +440,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 4e456a88f25ff1c40bba9827acffdde6,
         type: 3}
+    - target: {fileID: 1926007888333044, guid: 502004d60cb5f44678c4946dc8cdd4fd, type: 2}
+      propertyPath: m_Name
+      value: PlayButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 502004d60cb5f44678c4946dc8cdd4fd, type: 2}
   m_IsPrefabAsset: 0
@@ -455,7 +459,7 @@ GameObject:
   - component: {fileID: 637778849}
   - component: {fileID: 637778848}
   m_Layer: 5
-  m_Name: MenuButton
+  m_Name: CreditsButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1045,7 +1049,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 9acf9699fb48941f5b2781bf90546bf1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 27e41946cddfc9d4c8a1c453b8f711c5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1083,7 +1087,7 @@ GameObject:
   - component: {fileID: 2020404802}
   - component: {fileID: 2020404801}
   m_Layer: 5
-  m_Name: MenuButton
+  m_Name: QuitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1147,7 +1151,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2020404802}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1860070043}
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2020404802
