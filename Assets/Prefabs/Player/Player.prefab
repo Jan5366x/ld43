@@ -122,7 +122,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!60 &60107398486045910
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -175,8 +175,8 @@ MonoBehaviour:
   FireRate: 0.3
   CurrentEnergy: 100
   MaxEnergy: 100
-  EnergyRegeneration: 1.5
-  RequiredEnergy: 2
+  EnergyRegeneration: 7.8
+  RequiredEnergy: 8
 --- !u!114 &114599202889854310
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,7 +193,7 @@ MonoBehaviour:
   ArmorRegeneration: 0
   MaxShield: 200
   CurrentShield: 200
-  ShieldRegeneration: 0.2
+  ShieldRegeneration: 15
   DestructionPrefab: {fileID: 0}
   IsPlayer: 1
 --- !u!114 &114708757860304254
