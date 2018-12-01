@@ -15,7 +15,7 @@ namespace Combat
         public float CurrentShield = 200F;
         public float ShieldRegeneration = 0.2F;
         public Transform DestructionPrefab;
-
+        public bool IsPlayer = false;
 
         private void Update()
         {
