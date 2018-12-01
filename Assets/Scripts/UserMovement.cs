@@ -41,11 +41,11 @@ public class UserMovement : MonoBehaviour
 
             if (_speedX < cmpSpeed)
             {
-                _speedX += dtA;
+                _speedX = Mathf.Min(0, _speedX + dtA);
             }
             else if (_speedX > cmpSpeed)
             {
-                _speedX -= dtA;
+                _speedX = Mathf.Max(0, _speedX - dtA);
             }
         }
         else
@@ -57,11 +57,11 @@ public class UserMovement : MonoBehaviour
         {
             if (_speedY < 0)
             {
-                _speedY += dtA;
+                _speedY = Mathf.Min(0, _speedY + dtA);
             }
             else if (_speedY > 0)
             {
-                _speedY -= dtA;
+                _speedY = Mathf.Max(0, _speedY - dtA);
             }
         }
         else
@@ -69,8 +69,19 @@ public class UserMovement : MonoBehaviour
             _speedY += dtA * vertical;
         }
 
+        
         _speedX = Mathf.Clamp(_speedX, -MaxSpeed, MaxSpeed);
         _speedY = Mathf.Clamp(_speedY, -MaxSpeed, MaxSpeed);
+
+        Vector2 speedVec = new Vector2(_speedX, _speedY);
+
+        if (speedVec.magnitude > MaxSpeed)
+        {
+            _speedX = speedVec.normalized.x * MaxSpeed;
+            _speedY = speedVec.normalized.y * MaxSpeed;
+        }
+
+        Debug.Log("+++" + _speedX + " " + _speedY);
 
         Vector3 delta = new Vector3(dt * _speedX, dt * _speedY);
         Vector3 newPos = transform.position + delta;
@@ -91,6 +102,7 @@ public class UserMovement : MonoBehaviour
 
         if (spriteLeft < camLeft)
         {
+            atBoundsX = true;
             newPos.x = Mathf.Max(newPos.x, camLeft + GetWidth());
             if (_speedX < BaseSpeed)
             {
@@ -99,11 +111,16 @@ public class UserMovement : MonoBehaviour
         }
         else if (spriteRight > camRight)
         {
+            atBoundsX = true;
             newPos.x = Mathf.Min(newPos.x, camRight - GetWidth());
             if (_speedX > BaseSpeed)
             {
                 _speedX = BaseSpeed;
             }
+        }
+        else
+        {
+            atBoundsX = false;
         }
 
 
@@ -118,12 +135,16 @@ public class UserMovement : MonoBehaviour
         }
         else if (spriteBottom > camBottom)
         {
-            atBoundsX = true;
+            atBoundsY = true;
             newPos.y = Mathf.Min(newPos.y, camBottom - GetHeight());
             if (_speedY > 0)
             {
                 _speedY = 0;
             }
+        }
+        else
+        {
+            atBoundsY = false;
         }
 
         Debug.DrawLine(new Vector3(camLeft, camTop), new Vector3(camRight, camTop), Color.red);
@@ -134,6 +155,8 @@ public class UserMovement : MonoBehaviour
         Debug.DrawLine(transform.position, newPos, Color.red);
         Debug.DrawRay(transform.position, new Vector3(_speedX, _speedY), Color.green);
         transform.position = newPos;
+
+        Debug.Log("---" + _speedX + " " + _speedY);
     }
 
 
