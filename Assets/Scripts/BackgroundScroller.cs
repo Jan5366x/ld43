@@ -1,4 +1,4 @@
-﻿﻿using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -13,7 +13,7 @@ public class BackgroundScroller : MonoBehaviour
     void Start()
     {
         _player = GameObject.FindWithTag("Player");
-        
+
         var camera = GameObject.FindWithTag("MainCamera");
         _camera = camera.GetComponent<CameraHelper>();
 
@@ -23,7 +23,8 @@ public class BackgroundScroller : MonoBehaviour
         {
             Transform inst = Spawn(offset);
             SpriteRenderer renderer = inst.GetComponent<SpriteRenderer>();
-            float width = inst.localScale.x * renderer.sprite.texture.width / _camera.GetPixelDensity();
+            float width = inst.GetComponent<BackgroundSelfDestruct>().GetWidth();
+            Debug.Log("++++"+width);
 
             offset += width;
             if (offset > rightSide)
@@ -37,8 +38,8 @@ public class BackgroundScroller : MonoBehaviour
     void Update()
     {
         float maxRight = GetComponentsInChildren<BackgroundSelfDestruct>().Max(component => component.GetRightBound());
-        
-        if (maxRight < _camera.GetRightBound())
+
+        if (maxRight <= _camera.GetRightBound())
         {
             Spawn(maxRight);
         }
@@ -46,6 +47,7 @@ public class BackgroundScroller : MonoBehaviour
 
     private Transform Spawn(float offset)
     {
-        return Instantiate(Prefab, new Vector3(offset, 0), Quaternion.identity, transform);
+        Transform inst = Instantiate(Prefab, new Vector3(offset, 0), Quaternion.identity, transform);
+        return inst;
     }
 }
