@@ -1,3 +1,4 @@
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 
 namespace Combat
@@ -29,7 +30,7 @@ namespace Combat
 
         public void hit(float damage)
         {
-            if (isDead())
+            if (IsDead())
                 return;
 
             if (damage <= CurrentShield)
@@ -40,17 +41,17 @@ namespace Combat
             {
                 CurrentShield = 0;
                 CurrentArmor = Mathf.Max(CurrentArmor - (damage - CurrentShield), 0);
-                if (isDead())
-                    die();
+                if (IsDead())
+                    Die();
             }
         }
 
-        public bool isDead()
+        public bool IsDead()
         {
             return CurrentArmor <= 0;
         }
 
-        public void die()
+        public void Die()
         {
             Vector3 spawnPos = transform.position;
             
@@ -60,6 +61,37 @@ namespace Combat
                 Instantiate(DestructionPrefab, spawnPos, Quaternion.identity);
         }
 
+        public void HealArmor(float value)
+        {
+            if (value <= 0F)
+                return;
+
+            CurrentArmor = Mathf.Min(CurrentArmor + value, MaxArmor);
+        }
+
+        public void HealShield(float value)
+        {
+            if (value <= 0F)
+                return;
+
+            CurrentShield = Mathf.Min(CurrentShield + value, MaxShield);
+        }
+
+        public void RestoreShield()
+        {
+            CurrentShield = MaxShield;
+        }
+
+        public void RestoreArmor()
+        {
+            CurrentArmor = MaxArmor;
+        }
+
+        public void RestoreAll()
+        {
+            RestoreArmor();
+            RestoreShield();
+        }
 
     }
 }
