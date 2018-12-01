@@ -5,6 +5,7 @@ namespace Combat
     public class ImpactDamage : MonoBehaviour
     {
         public bool DamagePlayer = false;
+        public bool DamageEnemies = true;
         public float Damage = 10F;
         public Transform ImpactPrefab;
 
@@ -13,7 +14,7 @@ namespace Combat
             Destructible otherUnit = other.GetComponent<Destructible>();
             
             // ignore invalid units
-            if (otherUnit == null || (otherUnit.IsPlayer && !DamagePlayer) || otherUnit.IsDead())
+            if (otherUnit == null || (otherUnit.IsPlayer && !DamagePlayer) || (!otherUnit.IsPlayer && !DamageEnemies) || otherUnit.IsDead())
                 return;
             
             otherUnit.hit(Damage);
