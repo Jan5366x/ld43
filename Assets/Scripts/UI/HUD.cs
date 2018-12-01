@@ -14,9 +14,9 @@ public class HUD : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        _healthSlider = GameObject.Find("HealthBarSlider").GetComponent<Slider>();
-        _shieldSlider = GameObject.Find("ShieldBarSlider").GetComponent<Slider>();
-        _energySlider = GameObject.Find("EnergySlider").GetComponent<Slider>();
+        _healthSlider = GameObject.FindWithTag("HealthBar").GetComponent<Slider>();
+        _shieldSlider = GameObject.FindWithTag("ShieldBar").GetComponent<Slider>();
+        _energySlider = GameObject.FindWithTag("EnergyBar").GetComponent<Slider>();
 
         _player = GameObject.FindWithTag("Player");
         _playerDestruct = _player.GetComponent<Destructible>();

@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 114395846971619604}
   m_Layer: 5
   m_Name: HealthBarSlider
-  m_TagString: Untagged
+  m_TagString: HealthBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,7 +187,7 @@ GameObject:
   - component: {fileID: 114811647119845356}
   m_Layer: 5
   m_Name: EnergySlider
-  m_TagString: Untagged
+  m_TagString: EnergyBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 114850615841828130}
   m_Layer: 5
   m_Name: ShieldBarSlider
-  m_TagString: Untagged
+  m_TagString: ShieldBar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
