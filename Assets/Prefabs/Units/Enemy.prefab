@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 50782825262050220}
   - component: {fileID: 114670953961583848}
   - component: {fileID: 114923995377716040}
+  - component: {fileID: 114880633748083824}
+  - component: {fileID: 114397426864957928}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -158,6 +160,20 @@ PolygonCollider2D:
       - {x: 0.6637926, y: -0.03560853}
       - {x: 0.6904457, y: 0.07381773}
       - {x: 0.7057202, y: 0.19043377}
+--- !u!114 &114397426864957928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647192357090450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76f22aa8de076445da03522b1df5e6be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedX: 0.5
+  SpeedY: 0.1
+  RangeY: 3
 --- !u!114 &114432987510634352
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,12 +199,25 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1647192357090450}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 724ed3c1920d43019aa824f8bc5947a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   MovementSpeed: -0.58
+--- !u!114 &114880633748083824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1647192357090450}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358b93bc542cd4de682db9d3385f4b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedX: 0.2
+  SpeedY: 0.2
 --- !u!114 &114912719920423088
 MonoBehaviour:
   m_ObjectHideFlags: 1
