@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace;
 using UnityEngine;
 
 public class PickupItem : MonoBehaviour
 {
 
-	public IPickupCollectAction PickupCollectAction;
+	public int shieldDelta;
+	public int pointsDelta;
+	public int armorDelta;
+	public int energyDelta;
+	public Transform item;
 	
 	// Use this for initialization
 	void Start () {
