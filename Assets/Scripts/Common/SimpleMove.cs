@@ -7,7 +7,7 @@ namespace Common
         public float MovementSpeed = 1F;
         private void Update()
         {
-            transform.position += transform.forward * Time.deltaTime * MovementSpeed;
+            transform.position += transform.right * Time.deltaTime * MovementSpeed;
         }
     }
 }
