@@ -53,5 +53,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerPrefab: {fileID: 4125945444320364, guid: 8a8452bf2848569468e630f270116538,
     type: 2}
-  EnemyPrefab: {fileID: 4341895008901748, guid: 497ada030e11745d9b427f0fcb6a9418,
-    type: 2}
+  Waves:
+  - enemies:
+    - enemy: {fileID: 4341895008901748, guid: 497ada030e11745d9b427f0fcb6a9418, type: 2}
+      MinCount: 2
+      MaxCount: 5
+    delay: 5
+  - enemies:
+    - enemy: {fileID: 4341895008901748, guid: 497ada030e11745d9b427f0fcb6a9418, type: 2}
+      MinCount: 1
+      MaxCount: 2
+    delay: 30
+  - enemies: []
+    delay: 0
+  - enemies: []
+    delay: 0
+  - enemies: []
+    delay: 0
+  - enemies: []
+    delay: 0
+  - enemies: []
+    delay: 0
+  - enemies: []
+    delay: 0
+  - enemies: []
+    delay: 0
+  - enemies: []
+    delay: 0
