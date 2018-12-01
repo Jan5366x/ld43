@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform Prefab;
+    public Transform PlayerPrefab;
+    public Transform EnemyPrefab;
 
     // Use this for initialization
     void Start()
     {
+        Instantiate(PlayerPrefab, transform);
         StartCoroutine("SpawnDelayed");
     }
 
@@ -21,7 +23,9 @@ public class Spawner : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         GameObject player = GameObject.FindWithTag("Player");
-        
-        Instantiate(Prefab, player.transform.position + new Vector3(12, 0, 0), Quaternion.identity, transform);
+        if (player)
+        {
+            Instantiate(EnemyPrefab, player.transform.position + new Vector3(12, 0, 0), Quaternion.identity, transform);
+        }
     }
 }

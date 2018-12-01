@@ -9,12 +9,28 @@ public class CameraPlayerFollower : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        _player = GameObject.FindWithTag("Player");
+        LoadPlayer();
+    }
+
+    private void LoadPlayer()
+    {
+        if (!_player)
+        {
+            _player = GameObject.FindWithTag("Player");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Time.deltaTime * _player.GetComponent<UserMovement>().BaseSpeed, 0f, 0f);
+        LoadPlayer();
+        if (_player)
+        {
+            UserMovement userMovement = _player.GetComponent<UserMovement>();
+            if (userMovement)
+            {
+                transform.Translate(Time.deltaTime * userMovement.BaseSpeed, 0f, 0f);
+            }
+        }
     }
 }
