@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Combat;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
@@ -34,13 +35,18 @@ public class Spawner : MonoBehaviour
     IEnumerator SpawnDelayed()
     {
         LoadCamera();
-
-        List<Wave> waves = Waves.OrderBy(wave => wave.delay).ToList();
-        float delay = 0;
-        foreach (var wave in waves)
+        int widx = 0;
+        foreach (var wave in Waves)
         {
-            yield return new WaitForSeconds(wave.delay - delay);
-            delay = wave.delay;
+            if (wave.spawnWhenEmpty)
+            {
+                while (FindObjectsOfType<EnemyWeapon>().Length > 0)
+                {
+                    yield return new WaitForSeconds(1);
+                }
+            }
+
+            yield return new WaitForSeconds(wave.delay);
             Bounds bounds = _camera.OrthographicBounds();
 
             foreach (var waveEntry in wave.enemies)
@@ -53,6 +59,8 @@ public class Spawner : MonoBehaviour
                     Instantiate(waveEntry.enemy, new Vector3(spawnX, spawnY), Quaternion.identity);
                 }
             }
+
+            widx++;
         }
     }
 }

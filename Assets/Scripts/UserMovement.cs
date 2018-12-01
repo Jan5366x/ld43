@@ -81,8 +81,6 @@ public class UserMovement : MonoBehaviour
             _speedY = speedVec.normalized.y * MaxSpeed;
         }
 
-        Debug.Log("+++" + _speedX + " " + _speedY);
-
         Vector3 delta = new Vector3(dt * _speedX, dt * _speedY);
         Vector3 newPos = transform.position + delta;
 
@@ -155,8 +153,6 @@ public class UserMovement : MonoBehaviour
         Debug.DrawLine(transform.position, newPos, Color.red);
         Debug.DrawRay(transform.position, new Vector3(_speedX, _speedY), Color.green);
         transform.position = newPos;
-
-        Debug.Log("---" + _speedX + " " + _speedY);
     }
 
 
