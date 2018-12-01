@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
-public class PickupItem : MonoBehaviour {
+public class PickupItem : MonoBehaviour
+{
 
+	public IPickupCollectAction PickupCollectAction;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +17,6 @@ public class PickupItem : MonoBehaviour {
 	void Update () {
 		
 	}
+	
+	
 }
