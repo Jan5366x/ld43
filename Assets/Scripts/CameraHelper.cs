@@ -4,14 +4,36 @@ using UnityEngine;
 
 public class CameraHelper : MonoBehaviour
 {
+    public Bounds OrthographicBounds()
+    {
+        Camera camera = GetComponent<Camera>();
+        float screenAspect = (float) Screen.width / (float) Screen.height;
+        float cameraHeight = camera.orthographicSize * 2;
+        return new Bounds(
+            camera.transform.position,
+            new Vector3(cameraHeight * screenAspect, cameraHeight, 0)
+        );
+    }
+
     public float GetLeftBound()
     {
-        return transform.position.x - 2 * GetComponent<Camera>().orthographicSize;
+        return OrthographicBounds().min.x;
     }
 
     public float GetRightBound()
     {
-        return transform.position.x + 2 * GetComponent<Camera>().orthographicSize;
+        return OrthographicBounds().max.x;
+    }
+
+    public float GetTopBound()
+    {
+        return OrthographicBounds().min.y;
+    }
+
+
+    public float GetBottomBound()
+    {
+        return OrthographicBounds().max.y;
     }
 
     public float GetPixelDensity()
