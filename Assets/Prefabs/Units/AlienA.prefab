@@ -70,8 +70,8 @@ GameObject:
   - component: {fileID: 114243644610023892}
   - component: {fileID: 60776443500282818}
   - component: {fileID: 50487431428911310}
-  - component: {fileID: 114862462134595430}
   - component: {fileID: 114940415018777920}
+  - component: {fileID: 114485222574689274}
   m_Layer: 0
   m_Name: AlienA
   m_TagString: Untagged
@@ -237,6 +237,19 @@ MonoBehaviour:
   ShieldRegeneration: 0
   DestructionPrefab: {fileID: 0}
   IsPlayer: 0
+--- !u!114 &114485222574689274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1947116241844068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358b93bc542cd4de682db9d3385f4b5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedX: 0.5
+  SpeedY: 0.8
 --- !u!114 &114763742495910116
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,18 +263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 4600759729937680, guid: 46d0cd3dcda3b2c4bbb363ccc8366f12, type: 2}
   FireRate: 1
---- !u!114 &114862462134595430
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1947116241844068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 724ed3c1920d43019aa824f8bc5947a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovementSpeed: -0.58
 --- !u!114 &114940415018777920
 MonoBehaviour:
   m_ObjectHideFlags: 1
