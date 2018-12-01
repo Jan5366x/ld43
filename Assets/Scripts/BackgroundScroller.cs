@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.XR.WSA.Input;
 
 public class BackgroundScroller : MonoBehaviour
 {
@@ -24,9 +25,8 @@ public class BackgroundScroller : MonoBehaviour
             Transform inst = Spawn(offset);
             SpriteRenderer renderer = inst.GetComponent<SpriteRenderer>();
             float width = inst.GetComponent<BackgroundSelfDestruct>().GetWidth();
-            Debug.Log("++++"+width);
 
-            offset += width;
+            offset += 2 * width;
             if (offset > rightSide)
             {
                 break;
@@ -38,8 +38,9 @@ public class BackgroundScroller : MonoBehaviour
     void Update()
     {
         float maxRight = GetComponentsInChildren<BackgroundSelfDestruct>().Max(component => component.GetRightBound());
+        float camRight = _camera.GetRightBound();
 
-        if (maxRight <= _camera.GetRightBound())
+        if (maxRight <= camRight)
         {
             Spawn(maxRight);
         }
@@ -48,6 +49,8 @@ public class BackgroundScroller : MonoBehaviour
     private Transform Spawn(float offset)
     {
         Transform inst = Instantiate(Prefab, new Vector3(offset, 0), Quaternion.identity, transform);
+        float width = inst.GetComponent<BackgroundSelfDestruct>().GetWidth();
+        inst.position = new Vector3(inst.position.x + width, inst.position.y, inst.position.z);
         return inst;
     }
 }

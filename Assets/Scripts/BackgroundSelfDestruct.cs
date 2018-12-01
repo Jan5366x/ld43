@@ -24,6 +24,7 @@ public class BackgroundSelfDestruct : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        LoadCamera();
         if (GetRightBound() < _camera.GetLeftBound())
         {
             Destroy(gameObject);
@@ -33,18 +34,13 @@ public class BackgroundSelfDestruct : MonoBehaviour
 
     public float GetRightBound()
     {
+        SpriteRenderer renderer = GetComponent<SpriteRenderer>();
         return transform.position.x + GetWidth();
     }
 
     public float GetWidth()
     {
-        LoadCamera();
         SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-        if (renderer)
-        {
-            return transform.localScale.x * renderer.sprite.texture.width / renderer.sprite.pixelsPerUnit;
-        }
-
-        return 0;
+        return renderer.sprite.bounds.extents.x;
     }
 }
