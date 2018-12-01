@@ -15,6 +15,6 @@ public class CameraPlayerFollower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Time.deltaTime * _player.GetComponent<UserMovement>().baseSpeed, 0f, 0f);
+        transform.Translate(Time.deltaTime * _player.GetComponent<UserMovement>().BaseSpeed, 0f, 0f);
     }
 }
