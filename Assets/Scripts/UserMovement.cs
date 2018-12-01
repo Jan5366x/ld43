@@ -10,6 +10,8 @@ public class UserMovement : MonoBehaviour
     public float Acceleration;
     private float _speedX;
     private float _speedY;
+    private bool atBoundsX;
+    private bool atBoundsY;
 
     // Use this for initialization
     void Start()
@@ -24,37 +26,51 @@ public class UserMovement : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         float dt = Time.deltaTime;
+        float dtA = dt * Acceleration;
+
+        Debug.DrawRay(transform.position, new Vector3(horizontal * Acceleration, vertical * Acceleration),
+            Color.yellow);
 
         if (Mathf.Approximately(horizontal, 0))
         {
-            _speedX = _speedX < 0 ? _speedX + dt * Acceleration : _speedX - dt * Acceleration;
+            float cmpSpeed = 0;
+            if (atBoundsX)
+            {
+                cmpSpeed = BaseSpeed;
+            }
+
+            if (_speedX < cmpSpeed)
+            {
+                _speedX += dtA;
+            }
+            else if (_speedX > cmpSpeed)
+            {
+                _speedX -= dtA;
+            }
         }
         else
         {
-            _speedX += dt * Acceleration * horizontal;
+            _speedX += dtA * horizontal;
         }
 
         if (Mathf.Approximately(vertical, 0))
         {
-            _speedY = _speedY < 0 ? _speedY + dt * Acceleration : _speedY - dt * Acceleration;
+            if (_speedY < 0)
+            {
+                _speedY += dtA;
+            }
+            else if (_speedY > 0)
+            {
+                _speedY -= dtA;
+            }
         }
         else
         {
-            _speedY += dt * Acceleration * vertical;
+            _speedY += dtA * vertical;
         }
 
         _speedX = Mathf.Clamp(_speedX, -MaxSpeed, MaxSpeed);
         _speedY = Mathf.Clamp(_speedY, -MaxSpeed, MaxSpeed);
-
-        if (Mathf.Approximately(_speedX, 0))
-        {
-            _speedX = 0;
-        }
-
-        if (Mathf.Approximately(_speedY, 0))
-        {
-            _speedY = 0;
-        }
 
         Vector3 delta = new Vector3(dt * _speedX, dt * _speedY);
         Vector3 newPos = transform.position + delta;
@@ -93,6 +109,7 @@ public class UserMovement : MonoBehaviour
 
         if (spriteTop < camTop)
         {
+            atBoundsY = true;
             newPos.y = Mathf.Max(newPos.y, camTop + GetHeight());
             if (_speedY < 0)
             {
@@ -101,13 +118,14 @@ public class UserMovement : MonoBehaviour
         }
         else if (spriteBottom > camBottom)
         {
+            atBoundsX = true;
             newPos.y = Mathf.Min(newPos.y, camBottom - GetHeight());
             if (_speedY > 0)
             {
                 _speedY = 0;
             }
         }
-        
+
         Debug.DrawLine(new Vector3(camLeft, camTop), new Vector3(camRight, camTop), Color.red);
         Debug.DrawLine(new Vector3(camLeft, camBottom), new Vector3(camRight, camBottom), Color.green);
         Debug.DrawLine(new Vector3(camLeft, spriteTop), new Vector3(camRight, spriteTop), Color.blue);
