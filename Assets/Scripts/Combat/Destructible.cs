@@ -2,6 +2,9 @@ using UnityEngine;
 
 namespace Combat
 {
+    /// <summary>
+    /// used for basic life and destruction logic
+    /// </summary>
     public class Destructible : MonoBehaviour
     {
         public float MaxArmor = 100F;
@@ -10,8 +13,19 @@ namespace Combat
         public float MaxShield = 200F;
         public float CurrentShield = 200F;
         public float ShieldRegeneration = 0.2F;
-        public Transform destructionPrefab;
+        public Transform DestructionPrefab;
 
+
+        private void Update()
+        {
+            // process armor regeneration
+            if (CurrentArmor < MaxArmor && ArmorRegeneration > 0F)
+                CurrentArmor = Mathf.Min(CurrentArmor + (ArmorRegeneration * Time.deltaTime), MaxArmor);
+            
+            // process shield regeneration
+            if (CurrentShield < MaxShield && ShieldRegeneration > 0F)
+                CurrentShield = Mathf.Min(CurrentShield + (ShieldRegeneration * Time.deltaTime), MaxShield);
+        }
 
         public void hit(float damage)
         {
@@ -38,7 +52,12 @@ namespace Combat
 
         public void die()
         {
-            // TODO handle die and spawn destruction prefab if set
+            Vector3 spawnPos = transform.position;
+            
+            Destroy(gameObject);
+            
+            if (DestructionPrefab != null)
+                Instantiate(DestructionPrefab, spawnPos, Quaternion.identity);
         }
 
 
