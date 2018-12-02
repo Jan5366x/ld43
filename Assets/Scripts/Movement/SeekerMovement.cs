@@ -55,7 +55,7 @@ public class SeekerMovement : MonoBehaviour
 
     void seekTarget()
     {
-        EnemyWeapon[] allEnemies = GameObject.FindObjectsOfType<EnemyWeapon>();
+        Destructible[] allEnemies = GameObject.FindObjectsOfType<Destructible>();
         var camera = GameObject.FindWithTag("MainCamera");
         var _camera = camera.GetComponent<CameraHelper>();
 
@@ -67,6 +67,11 @@ public class SeekerMovement : MonoBehaviour
 
         foreach (var enemy in allEnemies)
         {
+            if (enemy.IsPlayer || enemy.IsDead())
+            {
+                continue;
+            }
+
             dist = Mathf.Abs(Vector3.Distance(transform.position, enemy.transform.position));
 
             if (dist > Range)
@@ -91,7 +96,7 @@ public class SeekerMovement : MonoBehaviour
 
         if (minIdx >= 0)
         {
-            _target = allEnemies[minIdx].GetComponentInParent<Destructible>().transform;
+            _target = allEnemies[minIdx].transform;
         }
     }
 }

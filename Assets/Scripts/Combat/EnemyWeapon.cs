@@ -8,7 +8,7 @@ namespace Combat
         public float FireRate = 0.3F;
 
         private float _fireRateCounter = 0F;
-        
+
         private void Update()
         {
             _fireRateCounter += Time.deltaTime;
@@ -21,9 +21,16 @@ namespace Combat
         }
 
         private void Fire()
-        { 
+        {
             if (Projectile != null)
-                Instantiate(Projectile, transform.position, Quaternion.identity);
+            {
+                var camera = GameObject.FindWithTag("MainCamera");
+                var _camera = camera.GetComponent<CameraHelper>();
+                if (_camera.IsInBounds(transform.position))
+                {
+                    Instantiate(Projectile, transform.position, Quaternion.identity);
+                }
+            }
         }
     }
 }

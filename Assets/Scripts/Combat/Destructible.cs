@@ -14,7 +14,7 @@ namespace Combat
         public float MaxShield = 200F;
         public float CurrentShield = 200F;
         public float ShieldRegeneration = 0.2F;
-        public int Reward = 1;
+        public int Reward = 100;
         public Transform DestructionPrefab;
         public bool IsPlayer = false;
 
