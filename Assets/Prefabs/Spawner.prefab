@@ -97,9 +97,27 @@ MonoBehaviour:
     delay: 0
     spawnWhenEmpty: 0
   Items:
-  - FrequencyMin: 1
-    FrequencyMax: 5
+  - FrequencyMin: 10
+    FrequencyMax: 30
     Prefab: {fileID: 4269112749825068, guid: d38c071209c6dec4ca05483485026ab0, type: 2}
-  - FrequencyMin: 1
-    FrequencyMax: 5
+  - FrequencyMin: 10
+    FrequencyMax: 30
     Prefab: {fileID: 4617633894684174, guid: f64416c503bb54e989b053ce22f30422, type: 2}
+  - FrequencyMin: 10
+    FrequencyMax: 30
+    Prefab: {fileID: 4288305849562048, guid: 76ac0146db960430ba6f1a0d926cec07, type: 2}
+  - FrequencyMin: 50
+    FrequencyMax: 100
+    Prefab: {fileID: 4494291827385540, guid: cbf1992baeefa49c3b9f12eb8264f591, type: 2}
+  - FrequencyMin: 100
+    FrequencyMax: 200
+    Prefab: {fileID: 4775865779611620, guid: a0d596928a18f48cd9abee604d5ceced, type: 2}
+  - FrequencyMin: 50
+    FrequencyMax: 200
+    Prefab: {fileID: 4432204420291254, guid: 18c089878eb4546c9b6a0053e1943f87, type: 2}
+  - FrequencyMin: 20
+    FrequencyMax: 300
+    Prefab: {fileID: 4808012528483150, guid: 7402ab17466704970834037af2666942, type: 2}
+  - FrequencyMin: 100
+    FrequencyMax: 200
+    Prefab: {fileID: 4658496552270958, guid: b4e2bb60dc6fb42708d514d57778f086, type: 2}
