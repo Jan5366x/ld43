@@ -12,16 +12,6 @@ public class PickupItem : MonoBehaviour
     public int EnergyDelta;
     public Transform Item;
 
-    // Use this for initialization
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         var d = other.GetComponent<Destructible>();
@@ -37,7 +27,15 @@ public class PickupItem : MonoBehaviour
         if (!w) return;
 
         w.CurrentEnergy = Mathf.Clamp(w.CurrentEnergy + EnergyDelta, 0, w.MaxEnergy);
-        
+
         Destroy(gameObject);
+
+        if (!Item) return;
+        
+        var swap = other.GetComponentInChildren<SwapWeapon>();
+        if (swap)
+        {
+            swap.Swap(Item);
+        }
     }
 }
