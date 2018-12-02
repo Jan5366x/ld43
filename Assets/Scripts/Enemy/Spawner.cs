@@ -8,6 +8,7 @@ public class Spawner : MonoBehaviour
 {
     public Transform PlayerPrefab;
     public Wave[] Waves;
+    public PickupWave[] Items;
     private CameraHelper _camera;
 
 
@@ -25,6 +26,11 @@ public class Spawner : MonoBehaviour
     {
         Instantiate(PlayerPrefab, transform);
         StartCoroutine("SpawnDelayed");
+
+        foreach (var item in Items)
+        {
+            StartCoroutine("SpawnPickups", item);
+        }
     }
 
     // Update is called once per frame
@@ -32,6 +38,17 @@ public class Spawner : MonoBehaviour
     {
     }
 
+    IEnumerator SpawnPickups(PickupWave item)
+    {
+        LoadCamera();
+
+        while (true)
+        {
+            yield return new WaitForSeconds(Random.Range(item.FrequencyMin, item.FrequencyMax));
+            SpawnAtBouds(_camera.OrthographicBounds(), item.Prefab);
+        }
+
+    }
     IEnumerator SpawnDelayed()
     {
         LoadCamera();
@@ -54,13 +71,18 @@ public class Spawner : MonoBehaviour
                 int cnt = Random.Range(waveEntry.MinCount, waveEntry.MaxCount);
                 for (int i = 0; i < cnt; i++)
                 {
-                    float spawnX = Random.Range(bounds.max.x, bounds.max.x + bounds.extents.x * 2f);
-                    float spawnY = Random.Range(bounds.min.y, bounds.max.y);
-                    Instantiate(waveEntry.enemy, new Vector3(spawnX, spawnY), Quaternion.identity);
+                    SpawnAtBouds(bounds, waveEntry.enemy);
                 }
             }
 
             widx++;
         }
+    }
+
+    void SpawnAtBouds(Bounds bounds, Transform prefab)
+    {
+        float spawnX = Random.Range(bounds.max.x, bounds.max.x + bounds.extents.x * 2f);
+        float spawnY = Random.Range(bounds.min.y, bounds.max.y);
+        Instantiate(prefab, new Vector3(spawnX, spawnY), Quaternion.identity);
     }
 }

@@ -8,6 +8,7 @@ public class UserMovement : MonoBehaviour
     public float BaseSpeed;
     public float MaxSpeed;
     public float Acceleration;
+    public float Deceleration;
     private float _speedX;
     private float _speedY;
     private bool atBoundsX;
@@ -27,6 +28,7 @@ public class UserMovement : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
         float dt = Time.deltaTime;
         float dtA = dt * Acceleration;
+        float dtD = dt * Deceleration;
 
         Debug.DrawRay(transform.position, new Vector3(horizontal * Acceleration, vertical * Acceleration),
             Color.yellow);
@@ -41,11 +43,11 @@ public class UserMovement : MonoBehaviour
 
             if (_speedX < cmpSpeed)
             {
-                _speedX = Mathf.Min(0, _speedX + dtA);
+                _speedX = Mathf.Min(0, _speedX + dtD);
             }
             else if (_speedX > cmpSpeed)
             {
-                _speedX = Mathf.Max(0, _speedX - dtA);
+                _speedX = Mathf.Max(0, _speedX - dtD);
             }
         }
         else
@@ -57,11 +59,11 @@ public class UserMovement : MonoBehaviour
         {
             if (_speedY < 0)
             {
-                _speedY = Mathf.Min(0, _speedY + dtA);
+                _speedY = Mathf.Min(0, _speedY + dtD);
             }
             else if (_speedY > 0)
             {
-                _speedY = Mathf.Max(0, _speedY - dtA);
+                _speedY = Mathf.Max(0, _speedY - dtD);
             }
         }
         else

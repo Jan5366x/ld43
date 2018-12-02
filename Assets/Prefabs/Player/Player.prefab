@@ -58,7 +58,7 @@ GameObject:
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
-  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -210,6 +210,7 @@ MonoBehaviour:
   BaseSpeed: 1
   MaxSpeed: 7
   Acceleration: 20
+  Deceleration: 50
 --- !u!212 &212679705201668814
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -243,7 +244,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 195687883
-  m_SortingLayer: 0
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e1ea9ce55064840a2bbab6e50a7056a8, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
