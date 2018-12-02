@@ -113,7 +113,7 @@ MonoBehaviour:
   PointsDelta: 100
   ArmorDelta: 0
   EnergyDelta: -50
-  Item: {fileID: 4934990938140696, guid: de1c6ad7b2e494894b2ee26a1a015070, type: 2}
+  Item: {fileID: 0}
 --- !u!212 &212257004446900872
 SpriteRenderer:
   m_ObjectHideFlags: 1
