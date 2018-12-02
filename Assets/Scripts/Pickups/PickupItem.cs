@@ -71,7 +71,7 @@ public class PickupItem : MonoBehaviour
     private void updateScore(Component other)
     {
         var score = other.GetComponent<ScoreCounter>();
-        score.Score = Mathf.Max(0, PointsDelta);
+        score.Score = Mathf.Max(score.Score + PointsDelta, 0);
     }
 
     private bool isPlayer(Component other)
