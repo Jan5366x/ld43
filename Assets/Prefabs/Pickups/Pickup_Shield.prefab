@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4394100258967470}
   - component: {fileID: 212257004446900872}
+  - component: {fileID: 114701980833407152}
   m_Layer: 0
   m_Name: shield_item
   m_TagString: Untagged
@@ -87,6 +88,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.18
+--- !u!114 &114701980833407152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1638479903528092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c565bd68ac2244fe6884e74c587ec901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Amount: 0.3
+  DurationWaitMin: 0.2
+  DurationWaitMax: 3
+  DurationFlash: 0.2
 --- !u!114 &114823154355008700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,9 +126,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShieldDelta: 100
+  ShieldDeltaMax: 0
+  ShieldDeltaRegen: 0
   PointsDelta: 100
   ArmorDelta: 0
+  ArmorDeltaMax: 0
+  ArmorDeltaRegen: 0
   EnergyDelta: -50
+  EnergyDeltaMax: 0
+  EnergyDeltaRegen: 0
   Item: {fileID: 0}
 --- !u!212 &212257004446900872
 SpriteRenderer:
