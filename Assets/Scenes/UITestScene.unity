@@ -281,6 +281,10 @@ Prefab:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1470805915052862, guid: 64a6cd53d677c41a4a05486832c74938, type: 2}
+      propertyPath: m_Name
+      value: ShieldIcon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64a6cd53d677c41a4a05486832c74938, type: 2}
   m_IsPrefabAsset: 0
