@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 114392933828782016}
   m_Layer: 5
   m_Name: SingleShotIcon
-  m_TagString: Untagged
+  m_TagString: SingleShotIcon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: 224140830021611342}
   - component: {fileID: 222179190333126452}
   - component: {fileID: 114438362839493468}
+  - component: {fileID: 114564149622752982}
   m_Layer: 5
   m_Name: PlayerWeaponPanel
   m_TagString: PlayerWeaponPanel
@@ -667,6 +668,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114564149622752982
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1528746089576192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d828f265a4df4e2692fd0838f1edcf5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114642770634175958
 MonoBehaviour:
   m_ObjectHideFlags: 1

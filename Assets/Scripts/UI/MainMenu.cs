@@ -1,21 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenu : MonoBehaviour
+namespace UI
 {
-    public string mainScene;
-
-    public void PlayGame()
+    public class MainMenu : MonoBehaviour
     {
-        SceneManager.LoadScene(mainScene);
-    }
+        public string MainScene;
 
-    public void QuitGame()
-    {
+        public void PlayGame()
+        {
+            SceneManager.LoadScene(MainScene);
+        }
+
+        public void QuitGame()
+        {
 #if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
+            UnityEditor.EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
+        }
     }
 }
