@@ -1,5 +1,6 @@
 ﻿using System;
 using Combat;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,10 +12,12 @@ namespace UI
         private Slider _healthSlider;
         private Slider _shieldSlider;
         private Slider _energySlider;
+        private TextMeshProUGUI _scoreCounterValue;
 
         // player state
         private Destructible _playerDestruct;
         private PlayerWeapon _playerWeapon;
+        private ScoreCounter _playerScore;
 
         // Update is called once per frame
         void Update()
@@ -24,12 +27,21 @@ namespace UI
             _healthSlider.value = _playerDestruct.CurrentArmor;
             _shieldSlider.value = _playerDestruct.CurrentShield;
             _energySlider.value = _playerWeapon.CurrentEnergy;
+            _scoreCounterValue.text = _playerScore.Score.ToString();
+        }
+
+        private void Start()
+        {
+            _healthSlider = GameObject.FindWithTag("HealthBar").GetComponent<Slider>();
+            _shieldSlider = GameObject.FindWithTag("ShieldBar").GetComponent<Slider>();
+            _energySlider = GameObject.FindWithTag("EnergyBar").GetComponent<Slider>();
+            _scoreCounterValue = GameObject.Find("ScoreCounterValue").GetComponent<TextMeshProUGUI>();
         }
 
         private bool HasContext()
         {
-            if (null != _playerDestruct && null != _playerWeapon) return true;
-            
+            if (null != _playerDestruct && null != _playerWeapon && null != _playerScore) return true;
+
             try
             {
                 InitContext();
@@ -45,14 +57,11 @@ namespace UI
 
         private void InitContext()
         {
-            _healthSlider = GameObject.FindWithTag("HealthBar").GetComponent<Slider>();
-            _shieldSlider = GameObject.FindWithTag("ShieldBar").GetComponent<Slider>();
-            _energySlider = GameObject.FindWithTag("EnergyBar").GetComponent<Slider>();
-
             var player = GameObject.FindWithTag("Player");
 
             _playerDestruct = player.GetComponent<Destructible>();
             _playerWeapon = player.GetComponentInChildren<PlayerWeapon>();
+            _playerScore = player.GetComponent<ScoreCounter>();
 
             //init sliders
             _healthSlider.maxValue = _playerDestruct.MaxArmor;
