@@ -134,6 +134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamagePlayer: 0
+  DamageEnemies: 1
   Damage: 10
   ImpactPrefab: {fileID: 0}
 --- !u!114 &114889826941914152

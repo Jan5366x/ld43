@@ -1,28 +1,32 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Combat;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class WeaponPanel : MonoBehaviour
+namespace UI
 {
-    enum WeaponTypes
+    public class WeaponPanel : MonoBehaviour
     {
-        SingleShot
-    }
+        [SerializeField] private GameObject _singleShotIcon;
 
-    List<GameObject> icons = new List<GameObject>();
+        private string _activeWeapon;
 
-    // Use this for initialization
-    void Start()
-    {
-        icons.Insert((int)WeaponTypes.SingleShot, GameObject.FindWithTag("SingleShotIcon"));
+        // Update is called once per frame
+        private void Update()
+        {
+            var currentWeapon = GameObject.FindWithTag("Player").GetComponentInChildren<PlayerWeapon>().Projectile.name;
 
+            if (currentWeapon == _activeWeapon) return;
 
-    }
+            switch (currentWeapon)
+            {
+                case "PlayerShotSimpleA":
+                    _singleShotIcon.SetActive(true);
+                    break;
+                default:
+                    Debug.LogError(string.Format("Unknown Weapon \"{0}\"", currentWeapon));
+                    break;
+            }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+            _activeWeapon = currentWeapon;
+        }
     }
 }
