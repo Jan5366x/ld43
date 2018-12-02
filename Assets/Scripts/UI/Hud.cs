@@ -27,6 +27,8 @@ namespace UI
                 _healthSlider.value = 0;
                 _shieldSlider.value = 0;
                 _energySlider.value = 0;
+
+                return;
             }
 
             _healthSlider.value = _playerDestruct.CurrentArmor;
