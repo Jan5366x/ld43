@@ -9,10 +9,10 @@ namespace UI
     public class Hud : MonoBehaviour
     {
         // UI Objects
-        private Slider _healthSlider;
-        private Slider _shieldSlider;
-        private Slider _energySlider;
-        private TextMeshProUGUI _scoreCounterValue;
+        [SerializeField] private Slider _healthSlider;
+        [SerializeField] private Slider _shieldSlider;
+        [SerializeField] private Slider _energySlider;
+        [SerializeField] private TextMeshProUGUI _scoreCounterValue;
 
         // player state
         private Destructible _playerDestruct;
@@ -28,14 +28,6 @@ namespace UI
             _shieldSlider.value = _playerDestruct.CurrentShield;
             _energySlider.value = _playerWeapon.CurrentEnergy;
             _scoreCounterValue.text = _playerScore.Score.ToString();
-        }
-
-        private void Start()
-        {
-            _healthSlider = GameObject.FindWithTag("HealthBar").GetComponent<Slider>();
-            _shieldSlider = GameObject.FindWithTag("ShieldBar").GetComponent<Slider>();
-            _energySlider = GameObject.FindWithTag("EnergyBar").GetComponent<Slider>();
-            _scoreCounterValue = GameObject.Find("ScoreCounterValue").GetComponent<TextMeshProUGUI>();
         }
 
         private bool HasContext()
