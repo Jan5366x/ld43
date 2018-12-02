@@ -45,6 +45,11 @@ public class PickupItem : MonoBehaviour
     private void updateShields(Component other)
     {
         var destructible = other.GetComponent<Destructible>();
+
+        PickupInfo.Spawner("Shield Maximum", ShieldDeltaMax);
+        PickupInfo.Spawner("Shield Regeneration", ShieldDeltaRegen);
+        PickupInfo.Spawner("Shield Boost", ShieldDelta);
+
         destructible.MaxShield = Mathf.Max(destructible.MaxShield + ShieldDeltaMax, 0);
         destructible.ShieldRegeneration = Mathf.Max(destructible.ShieldRegeneration + ShieldDeltaRegen, 0);
         destructible.CurrentShield = Mathf.Clamp(destructible.CurrentShield + ShieldDelta, 0, destructible.MaxShield);
@@ -53,6 +58,11 @@ public class PickupItem : MonoBehaviour
     private void updateArmor(Component other)
     {
         var destructible = other.GetComponent<Destructible>();
+
+        PickupInfo.Spawner("Armor Maximum", ArmorDeltaMax);
+        PickupInfo.Spawner("Armor Regeneration", ArmorDeltaRegen);
+        PickupInfo.Spawner("Armor Boost", ArmorDelta);
+
         destructible.MaxArmor = Mathf.Max(destructible.MaxArmor + ArmorDeltaMax, 0);
         destructible.ArmorRegeneration = Mathf.Max(destructible.ArmorRegeneration + ArmorDeltaRegen, 0);
         destructible.CurrentArmor = Mathf.Clamp(destructible.CurrentArmor + ArmorDelta, 0, destructible.MaxArmor);
@@ -62,6 +72,10 @@ public class PickupItem : MonoBehaviour
     {
         var w = other.GetComponentInChildren<PlayerWeapon>();
         if (!w) return;
+
+        PickupInfo.Spawner("Energy Maximum", EnergyDeltaMax);
+        PickupInfo.Spawner("Energy Regeneration", EnergyDeltaRegen);
+        PickupInfo.Spawner("Energy Boost", EnergyDelta);
 
         w.MaxEnergy = Mathf.Max(w.MaxEnergy + EnergyDeltaMax, 0);
         w.EnergyRegeneration = Mathf.Max(w.EnergyRegeneration + EnergyDeltaRegen, 0);
