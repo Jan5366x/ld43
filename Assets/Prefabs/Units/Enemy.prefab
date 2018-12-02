@@ -43,7 +43,7 @@ GameObject:
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
-  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -189,6 +189,7 @@ MonoBehaviour:
   MaxShield: 100
   CurrentShield: 100
   ShieldRegeneration: 0
+  Reward: 1
   DestructionPrefab: {fileID: 0}
   IsPlayer: 0
 --- !u!114 &114912719920423088
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396a65fe3f5d470aa73cc4b2fc542ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 4600759729937680, guid: 46d0cd3dcda3b2c4bbb363ccc8366f12, type: 2}
+  Projectile: {fileID: 4871028997253304, guid: e4e81248206fd4566a0ad3f5298de5e5, type: 2}
   FireRate: 1
 --- !u!114 &114923995377716040
 MonoBehaviour:
