@@ -1,5 +1,4 @@
-﻿using System;
-using Combat;
+﻿using Combat;
 using UnityEngine;
 using UnityEngine.UI;
 
