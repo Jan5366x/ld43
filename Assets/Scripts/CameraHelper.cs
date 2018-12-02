@@ -41,4 +41,12 @@ public class CameraHelper : MonoBehaviour
         Camera cam = GetComponent<Camera>();
         return cam.pixelWidth / cam.orthographicSize;
     }
+
+    public bool IsInBounds(Vector3 pos)
+    {
+        var bounds = OrthographicBounds();
+        //Why u so stupid Unity
+        return bounds.min.x < pos.x && bounds.min.y < pos.y &&
+               bounds.max.x > pos.x && bounds.max.y > pos.y;
+    }
 }

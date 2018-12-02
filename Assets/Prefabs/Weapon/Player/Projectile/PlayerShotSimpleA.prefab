@@ -19,11 +19,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4479076747741306}
-  - component: {fileID: 114889826941914152}
   - component: {fileID: 114049022344530522}
   - component: {fileID: 70816467147093668}
   - component: {fileID: 114173411790400968}
   - component: {fileID: 50574137295807206}
+  - component: {fileID: 114051443646452562}
   m_Layer: 0
   m_Name: PlayerShotSimpleA
   m_TagString: Untagged
@@ -122,6 +122,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lifetime: 5
   DestructionPrefab: {fileID: 0}
+--- !u!114 &114051443646452562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318445665491334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fb7e5312969445a9a8321562583eaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedX: 5
+  SpeedY: 5
+  Range: 5
 --- !u!114 &114173411790400968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,18 +151,6 @@ MonoBehaviour:
   DamageEnemies: 1
   Damage: 10
   ImpactPrefab: {fileID: 0}
---- !u!114 &114889826941914152
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1318445665491334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 724ed3c1920d43019aa824f8bc5947a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MovementSpeed: 45
 --- !u!212 &212602869455828612
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -182,7 +184,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -227402125
-  m_SortingLayer: 0
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f391303d72405a64fb7a80291881e32b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

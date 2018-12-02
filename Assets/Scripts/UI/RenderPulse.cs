@@ -43,7 +43,7 @@ public class RenderPulse : MonoBehaviour
         float h, s, v;
         Color.RGBToHSV(_base, out h, out s, out v);
         _renderer.color = Color.HSVToRGB(
-            h, 
+            h,
             Mathf.Clamp01(s * (1 - Amount) + s * Amount * t),
             Mathf.Clamp01(v * (1 - Amount) + v * Amount * t)
         );

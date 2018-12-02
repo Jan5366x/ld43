@@ -128,7 +128,7 @@ MonoBehaviour:
   ShieldDelta: 100
   ShieldDeltaMax: 0
   ShieldDeltaRegen: 0
-  PointsDelta: 100
+  PointsDelta: 1
   ArmorDelta: 0
   ArmorDeltaMax: 0
   ArmorDeltaRegen: 0

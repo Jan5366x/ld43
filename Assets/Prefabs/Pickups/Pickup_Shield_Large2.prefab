@@ -9,36 +9,18 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1489469401622070}
+  m_RootGameObject: {fileID: 1880532420887440}
   m_IsPrefabAsset: 1
---- !u!1 &1489469401622070
+--- !u!1 &1601461369037490
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4617633894684174}
-  - component: {fileID: 114074585227368524}
-  - component: {fileID: 58233237222060518}
-  - component: {fileID: 114141325820916360}
-  m_Layer: 0
-  m_Name: Pickup_Heart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1608841021046064
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4183090058524058}
-  - component: {fileID: 212392241078599368}
-  - component: {fileID: 114294796677347290}
+  - component: {fileID: 4266634234354570}
+  - component: {fileID: 212124653263794332}
+  - component: {fileID: 114828305278132936}
   m_Layer: 0
   m_Name: shield_item
   m_TagString: Untagged
@@ -46,39 +28,57 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4183090058524058
+--- !u!1 &1880532420887440
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4658496552270958}
+  - component: {fileID: 114373051745737732}
+  - component: {fileID: 58865004992018104}
+  - component: {fileID: 114322847597200450}
+  m_Layer: 0
+  m_Name: Pickup_Shield_Large2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4266634234354570
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1608841021046064}
+  m_GameObject: {fileID: 1601461369037490}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4617633894684174}
+  m_Father: {fileID: 4658496552270958}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4617633894684174
+--- !u!4 &4658496552270958
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1489469401622070}
+  m_GameObject: {fileID: 1880532420887440}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4183090058524058}
+  - {fileID: 4266634234354570}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58233237222060518
+--- !u!58 &58865004992018104
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1489469401622070}
+  m_GameObject: {fileID: 1880532420887440}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -88,60 +88,60 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.18
---- !u!114 &114074585227368524
+--- !u!114 &114322847597200450
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1489469401622070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f79430a0c452ab1428252a2cab009ebd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShieldDelta: 0
-  ShieldDeltaMax: 0
-  ShieldDeltaRegen: 0
-  PointsDelta: 1
-  ArmorDelta: 100
-  ArmorDeltaMax: 0
-  ArmorDeltaRegen: 0
-  EnergyDelta: 20
-  EnergyDeltaMax: 0
-  EnergyDeltaRegen: 0
-  Item: {fileID: 0}
---- !u!114 &114141325820916360
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1489469401622070}
+  m_GameObject: {fileID: 1880532420887440}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1942b85293c981542803e1093d98919e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114294796677347290
+--- !u!114 &114373051745737732
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1608841021046064}
+  m_GameObject: {fileID: 1880532420887440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79430a0c452ab1428252a2cab009ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShieldDelta: -50
+  ShieldDeltaMax: -30
+  ShieldDeltaRegen: 30
+  PointsDelta: 1
+  ArmorDelta: 0
+  ArmorDeltaMax: 0
+  ArmorDeltaRegen: 0
+  EnergyDelta: -100
+  EnergyDeltaMax: 0
+  EnergyDeltaRegen: -3
+  Item: {fileID: 0}
+--- !u!114 &114828305278132936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1601461369037490}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c565bd68ac2244fe6884e74c587ec901, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Amount: 0.2
-  DurationWaitMin: 0.3
-  DurationWaitMax: 5
-  DurationFlash: 0.3
---- !u!212 &212392241078599368
+  Amount: 0.3
+  DurationWaitMin: 0.2
+  DurationWaitMax: 3
+  DurationFlash: 0.2
+--- !u!212 &212124653263794332
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1608841021046064}
+  m_GameObject: {fileID: 1601461369037490}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -171,8 +171,8 @@ SpriteRenderer:
   m_SortingLayerID: -227402125
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cbdc5126be3b548e0954558b21f77dbc, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300070, guid: 162cd62ee5eb51c4ba16311fa1525a04, type: 3}
+  m_Color: {r: 0, g: 1, b: 0.9529412, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

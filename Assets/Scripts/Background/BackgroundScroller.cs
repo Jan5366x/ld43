@@ -22,7 +22,6 @@ public class BackgroundScroller : MonoBehaviour
         while (true)
         {
             Transform inst = Spawn(offset);
-            SpriteRenderer renderer = inst.GetComponent<SpriteRenderer>();
             float width = inst.GetComponent<BackgroundSelfDestruct>().GetWidth();
 
             offset += 2 * width;
