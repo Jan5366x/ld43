@@ -22,7 +22,12 @@ namespace UI
         // Update is called once per frame
         void Update()
         {
-            if (!HasContext()) return;
+            if (!HasContext())
+            {
+                _healthSlider.value = 0;
+                _shieldSlider.value = 0;
+                _energySlider.value = 0;
+            }
 
             _healthSlider.value = _playerDestruct.CurrentArmor;
             _shieldSlider.value = _playerDestruct.CurrentShield;
