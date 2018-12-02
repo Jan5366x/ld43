@@ -14,6 +14,7 @@ namespace Combat
         public float MaxShield = 200F;
         public float CurrentShield = 200F;
         public float ShieldRegeneration = 0.2F;
+        public int Reward = 1;
         public Transform DestructionPrefab;
         public bool IsPlayer = false;
 
@@ -22,7 +23,7 @@ namespace Combat
             // process armor regeneration
             if (CurrentArmor < MaxArmor && ArmorRegeneration > 0F)
                 CurrentArmor = Mathf.Min(CurrentArmor + (ArmorRegeneration * Time.deltaTime), MaxArmor);
-            
+
             // process shield regeneration
             if (CurrentShield < MaxShield && ShieldRegeneration > 0F)
                 CurrentShield = Mathf.Min(CurrentShield + (ShieldRegeneration * Time.deltaTime), MaxShield);
@@ -54,11 +55,21 @@ namespace Combat
         public void Die()
         {
             Vector3 spawnPos = transform.position;
-            
+
             Destroy(gameObject);
-            
+
             if (DestructionPrefab != null)
                 Instantiate(DestructionPrefab, spawnPos, Quaternion.identity);
+
+            if (!IsPlayer)
+            {
+                var player = GameObject.FindGameObjectWithTag("Player");
+                if (player)
+                {
+                    var score = player.GetComponent<ScoreCounter>();
+                    score.Score = Mathf.Max(0, score.Score + Reward);
+                }
+            }
         }
 
         public void HealArmor(float value)
@@ -92,6 +103,5 @@ namespace Combat
             RestoreArmor();
             RestoreShield();
         }
-
     }
 }
