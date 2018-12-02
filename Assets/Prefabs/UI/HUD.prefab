@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 222606058067193808}
   - component: {fileID: 114258202177223714}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: ScoreCounterLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ GameObject:
   - component: {fileID: 222877707614876508}
   - component: {fileID: 114720398374394210}
   m_Layer: 5
-  m_Name: TextMeshPro Text
+  m_Name: ScoreCounterValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
