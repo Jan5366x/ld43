@@ -316,6 +316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectile: {fileID: 4479076747741306, guid: 0830b36d9fa6fba4ca392dce575bea94, type: 2}
+  ProjectileCount: 3
+  ProjectileAngle: 5
   FireRate: 0.3
   CurrentEnergy: 100
   MaxEnergy: 100
