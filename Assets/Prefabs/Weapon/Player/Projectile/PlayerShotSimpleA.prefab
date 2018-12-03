@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114173411790400968}
   - component: {fileID: 50574137295807206}
   - component: {fileID: 114051443646452562}
+  - component: {fileID: 114748898286964468}
   m_Layer: 0
   m_Name: PlayerShotSimpleA
   m_TagString: Untagged
@@ -128,7 +129,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1318445665491334}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4fb7e5312969445a9a8321562583eaba, type: 3}
   m_Name: 
@@ -151,6 +152,19 @@ MonoBehaviour:
   DamageEnemies: 1
   Damage: 10
   ImpactPrefab: {fileID: 0}
+--- !u!114 &114748898286964468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1318445665491334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a7eb392159e4447a8ea14d6e361de63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Angle: 15
+  Speed: 10
 --- !u!212 &212602869455828612
 SpriteRenderer:
   m_ObjectHideFlags: 1
