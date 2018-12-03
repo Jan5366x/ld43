@@ -288,8 +288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396a65fe3f5d470aa73cc4b2fc542ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 4289226547387300, guid: 6faa610f9d85c6a449fe67d1a97f0d73, type: 2}
-  FireRate: 1
+  Projectile: {fileID: 4557895073277420, guid: dc5a8fcbb67cf46e89b6797a1592f51e, type: 2}
+  FireRate: 0.2
 --- !u!114 &114492644625449322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -301,13 +301,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28635f9919d64d60a4fb774fee847ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxArmor: 50
-  CurrentArmor: 50
-  ArmorRegeneration: 0
-  MaxShield: 100
-  CurrentShield: 100
+  MaxArmor: 10
+  CurrentArmor: 10
+  ArmorRegeneration: 1
+  MaxShield: 0
+  CurrentShield: 0
   ShieldRegeneration: 0
-  Reward: 1
+  Reward: 10
   DestructionPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
     type: 2}
   IsPlayer: 0
