@@ -21,14 +21,11 @@ public class SeekerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dt = lastSeek - Time.time;
-        if (!_target)
+        float dt = Time.time - lastSeek;
+        if (0.2 < dt)
         {
-            if (1 > dt && dt < 5)
-            {
-                seekTarget();
-                lastSeek = Time.time;
-            }
+            seekTarget();
+            lastSeek = Time.time;
         }
 
 
@@ -61,25 +58,25 @@ public class SeekerMovement : MonoBehaviour
 
         int minIdx = -1;
         float minDist = float.MaxValue;
-        float dist;
-        bool inBounds;
-        int idx = 0;
 
-        foreach (var enemy in allEnemies)
+
+        for (int idx = 0; idx < allEnemies.Length; idx++)
         {
+            var enemy = allEnemies[idx];
             if (enemy.IsPlayer || enemy.IsDead())
             {
                 continue;
             }
 
-            dist = Mathf.Abs(Vector3.Distance(transform.position, enemy.transform.position));
+            Vector3 delta = transform.position - enemy.transform.position;
+            float dist = delta.x * delta.x + delta.y * delta.y;
 
-            if (dist > Range)
+            if (dist > Range * Range)
             {
                 continue;
             }
 
-            inBounds = _camera.IsInBounds(enemy.transform.position);
+            bool inBounds = _camera.IsInBounds(enemy.transform.position);
             if (!inBounds)
             {
                 continue;
@@ -91,7 +88,6 @@ public class SeekerMovement : MonoBehaviour
                 minIdx = idx;
             }
 
-            idx++;
         }
 
         if (minIdx >= 0)
