@@ -12,6 +12,7 @@ TagManager:
   - SingleShotIcon
   - PausedPanel
   - SinglePickupIcon
+  - DeathPanel
   layers:
   - Default
   - TransparentFX

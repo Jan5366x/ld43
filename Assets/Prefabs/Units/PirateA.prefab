@@ -248,8 +248,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28635f9919d64d60a4fb774fee847ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxArmor: 100
-  CurrentArmor: 100
+  MaxArmor: 50
+  CurrentArmor: 50
   ArmorRegeneration: 0
   MaxShield: 20
   CurrentShield: 20

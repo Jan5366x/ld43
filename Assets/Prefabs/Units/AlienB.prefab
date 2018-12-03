@@ -325,8 +325,8 @@ MonoBehaviour:
   MaxArmor: 10
   CurrentArmor: 10
   ArmorRegeneration: 0
-  MaxShield: 20
-  CurrentShield: 20
+  MaxShield: 40
+  CurrentShield: 40
   ShieldRegeneration: 1
   Reward: 30
   DestructionPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
