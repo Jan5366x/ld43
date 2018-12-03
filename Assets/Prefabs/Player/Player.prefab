@@ -288,7 +288,8 @@ MonoBehaviour:
   CurrentShield: 200
   ShieldRegeneration: 15
   Reward: 100
-  DestructionPrefab: {fileID: 0}
+  DestructionPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
+    type: 2}
   IsPlayer: 1
 --- !u!114 &114708757860304254
 MonoBehaviour:
@@ -348,6 +349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7940b391a27cf4823854f4336c72009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PreviewSprite: {fileID: 0}
+  PreviewColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &212017705566643880
 SpriteRenderer:
   m_ObjectHideFlags: 1
