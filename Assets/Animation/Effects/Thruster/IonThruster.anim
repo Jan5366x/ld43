@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: AlienThruster
+  m_Name: IonThruster
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -19,13 +19,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300004, guid: c47dadcec6483a84da9fa220276037af, type: 3}
+      value: {fileID: 21300002, guid: c47dadcec6483a84da9fa220276037af, type: 3}
     - time: 0.06666667
-      value: {fileID: 21300004, guid: b32b7e7643e6d904d98fd7ac77cf1d6d, type: 3}
+      value: {fileID: 21300002, guid: b32b7e7643e6d904d98fd7ac77cf1d6d, type: 3}
     - time: 0.13333334
-      value: {fileID: 21300004, guid: 2850e10166742db49b2e670356d108b3, type: 3}
+      value: {fileID: 21300002, guid: 2850e10166742db49b2e670356d108b3, type: 3}
     - time: 0.2
-      value: {fileID: 21300004, guid: f7213e17a787332479fd18b6c916c195, type: 3}
+      value: {fileID: 21300002, guid: f7213e17a787332479fd18b6c916c195, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -45,10 +45,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300004, guid: c47dadcec6483a84da9fa220276037af, type: 3}
-    - {fileID: 21300004, guid: b32b7e7643e6d904d98fd7ac77cf1d6d, type: 3}
-    - {fileID: 21300004, guid: 2850e10166742db49b2e670356d108b3, type: 3}
-    - {fileID: 21300004, guid: f7213e17a787332479fd18b6c916c195, type: 3}
+    - {fileID: 21300002, guid: c47dadcec6483a84da9fa220276037af, type: 3}
+    - {fileID: 21300002, guid: b32b7e7643e6d904d98fd7ac77cf1d6d, type: 3}
+    - {fileID: 21300002, guid: 2850e10166742db49b2e670356d108b3, type: 3}
+    - {fileID: 21300002, guid: f7213e17a787332479fd18b6c916c195, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
