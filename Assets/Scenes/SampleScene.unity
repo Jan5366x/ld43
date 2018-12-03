@@ -123,7 +123,7 @@ Prefab:
     - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
         type: 2}
       propertyPath: Items.Array.size
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4119784585065712, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf, type: 2}
       propertyPath: m_LocalPosition.x
@@ -202,6 +202,22 @@ Prefab:
     - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
         type: 2}
       propertyPath: Items.Array.data[10].Prefab
+      value: 
+      objectReference: {fileID: 4128630786165800, guid: 566b1a71f6edb45fdace6c3ce8126c7a,
+        type: 2}
+    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
+        type: 2}
+      propertyPath: Items.Array.data[11].FrequencyMin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
+        type: 2}
+      propertyPath: Items.Array.data[11].FrequencyMax
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
+        type: 2}
+      propertyPath: Items.Array.data[11].Prefab
       value: 
       objectReference: {fileID: 4283974911437176, guid: c089cda28865c42339096fd1c9244415,
         type: 2}
