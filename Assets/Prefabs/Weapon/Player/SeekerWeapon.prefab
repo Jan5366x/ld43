@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Projectile: {fileID: 4158498402977640, guid: 88cfee522b3104efba435a570317a46a, type: 2}
+  WeaponPreview: {fileID: 21300060, guid: 162cd62ee5eb51c4ba16311fa1525a04, type: 3}
+  WeaponColor: {r: 0.31764707, g: 0.6313726, b: 0.3254902, a: 1}
   ProjectileCount: 1
   ProjectileAngle: 15
   FireRate: 0.3
@@ -66,7 +68,7 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1721154636382936}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

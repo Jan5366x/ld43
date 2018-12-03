@@ -1,32 +1,27 @@
 ﻿using Combat;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace UI
 {
     public class WeaponPanel : MonoBehaviour
     {
-        [SerializeField] private GameObject _singleShotIcon;
+        private Image _spriteRenderer;
 
-        private string _activeWeapon;
+        private void Start()
+        {
+            _spriteRenderer = GameObject.FindWithTag("SingleShotIcon").GetComponent<Image>();
+        }
 
         // Update is called once per frame
         private void Update()
         {
-            var currentWeapon = GameObject.FindWithTag("Player").GetComponentInChildren<PlayerWeapon>().Projectile.name;
+            var playerWeapon = GameObject.FindWithTag("Player").GetComponentInChildren<PlayerWeapon>();
+            var weaponPreview = playerWeapon.WeaponPreview;
+            var weaponColor = playerWeapon.WeaponColor;
 
-            if (currentWeapon == _activeWeapon) return;
-
-            switch (currentWeapon)
-            {
-                case "PlayerShotSimpleA":
-                    _singleShotIcon.SetActive(true);
-                    break;
-                default:
-                    Debug.LogError(string.Format("Unknown Weapon \"{0}\"", currentWeapon));
-                    break;
-            }
-
-            _activeWeapon = currentWeapon;
+            _spriteRenderer.sprite = weaponPreview;
+            _spriteRenderer.color = weaponColor;
         }
     }
 }
