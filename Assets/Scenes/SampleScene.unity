@@ -499,7 +499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Prefab: {fileID: 4147966681418044, guid: 58461786b79d248fc9968530e5697fef, type: 2}
-  Multiplier: 0
+  Multiplier: 0.001
 --- !u!4 &952276502
 Transform:
   m_ObjectHideFlags: 0
@@ -663,7 +663,7 @@ GameObject:
   - component: {fileID: 1430847844}
   - component: {fileID: 1430847843}
   m_Layer: 0
-  m_Name: Background (1)
+  m_Name: BackgroundF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

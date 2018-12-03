@@ -46,9 +46,15 @@ public class BackgroundScroller : MonoBehaviour
 
         if (Multiplier > 0)
         {
+            float baseSpeed = 5;
             _player = GameObject.FindWithTag("Player");
-            var userMovement = _player.GetComponent<UserMovement>();
-            transform.Translate(-Multiplier * userMovement.BaseSpeed, 0, 0);
+            if (_player)
+            {
+                var userMovement = _player.GetComponent<UserMovement>();
+                baseSpeed = userMovement.BaseSpeed;
+            }
+
+            transform.Translate(-Multiplier * baseSpeed, 0, 0);
         }
     }
 
