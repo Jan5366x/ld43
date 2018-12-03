@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - HUD
+  - HealthBar
+  - EnergyBar
+  - ShieldBar
+  - PlayerWeaponPanel
+  - SingleShotIcon
+  - PausedPanel
   layers:
   - Default
   - TransparentFX
