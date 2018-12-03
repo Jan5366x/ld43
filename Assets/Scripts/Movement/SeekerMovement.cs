@@ -8,6 +8,7 @@ public class SeekerMovement : MonoBehaviour
     public float Speed;
     public float Range;
     public float TurningAngle;
+    public bool IsPlayer;
 
     private float lastSeek;
     private float _angle;
@@ -73,7 +74,7 @@ public class SeekerMovement : MonoBehaviour
         for (int idx = 0; idx < allEnemies.Length; idx++)
         {
             var enemy = allEnemies[idx];
-            if (enemy.IsPlayer || enemy.IsDead())
+            if (enemy.IsPlayer != IsPlayer || enemy.IsDead())
             {
                 continue;
             }
