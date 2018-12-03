@@ -29,7 +29,7 @@ public class PickupItem : MonoBehaviour
         updateEnergy(other);
         updateScore(other);
 
-        triggerEffect(other);
+        storeEffect(other);
 
         Destroy(gameObject);
     }
@@ -85,10 +85,11 @@ public class PickupItem : MonoBehaviour
         w.CurrentEnergy = Mathf.Clamp(w.CurrentEnergy + EnergyDelta, 0, w.MaxEnergy);
     }
 
-    private void triggerEffect(Component other)
+    private void storeEffect(Component other)
     {
         if (!Effect) return;
-        Instantiate(Effect, other.transform.position, Quaternion.identity);
+        SpriteRenderer renderer = GetComponentInChildren<SpriteRenderer>();
+        other.GetComponent<TriggerEffect>().Store(Effect, renderer.sprite, renderer.color);
     }
 
     private void updateScore(Component other)

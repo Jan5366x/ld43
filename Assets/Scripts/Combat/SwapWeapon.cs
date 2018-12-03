@@ -7,8 +7,7 @@ public class SwapWeapon : MonoBehaviour
 {
     public void Swap(Transform prefab)
     {
-        var weapon = GetComponentInChildren<PlayerWeapon>();
-        if (weapon)
+        foreach (var weapon in GetComponentsInChildren<PlayerWeapon>())
         {
             Destroy(weapon.gameObject);
         }

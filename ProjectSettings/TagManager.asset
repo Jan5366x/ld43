@@ -11,6 +11,7 @@ TagManager:
   - PlayerWeaponPanel
   - SingleShotIcon
   - PausedPanel
+  - SinglePickupIcon
   layers:
   - Default
   - TransparentFX
