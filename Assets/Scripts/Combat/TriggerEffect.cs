@@ -8,17 +8,22 @@ public class TriggerEffect : MonoBehaviour
     public Sprite PreviewSprite;
     public Color PreviewColor;
 
+    private bool _wasTriggered;
+
     // Use this for initialization
     void Start()
     {
+        _wasTriggered = true;
     }
 
     // Update is called once per frame
 
     void Update()
     {
+        if (_wasTriggered) return;
         if (Input.GetButtonDown("Fire3") && _effect)
         {
+            _wasTriggered = true;
             Instantiate(_effect, transform.position, Quaternion.identity);
             _effect = null;
             PreviewSprite = null;
@@ -31,5 +36,6 @@ public class TriggerEffect : MonoBehaviour
         _effect = effect;
         PreviewSprite = sprite;
         PreviewColor = color;
+        _wasTriggered = false;
     }
 }

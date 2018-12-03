@@ -7,12 +7,15 @@ public class LinearMovement : MonoBehaviour
     public float Angle;
     public float Speed;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
         Quaternion quat = Quaternion.AngleAxis(Angle, Vector3.forward);
         transform.rotation = quat;
-        Vector3 vec = quat * Vector3.right;
-        transform.Translate(Time.deltaTime * vec * Speed);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        transform.Translate(Time.deltaTime * Vector3.right * Speed);
     }
 }

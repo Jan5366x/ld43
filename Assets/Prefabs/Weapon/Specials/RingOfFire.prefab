@@ -51,5 +51,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76f5ea83153249fda2e3a245f7ce2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Angle: 5
+  Angle: 20
+  Distance: 1
   Projectile: {fileID: 4479076747741306, guid: 0830b36d9fa6fba4ca392dce575bea94, type: 2}

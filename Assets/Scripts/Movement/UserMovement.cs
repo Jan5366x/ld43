@@ -33,7 +33,7 @@ public class UserMovement : MonoBehaviour
         Debug.DrawRay(transform.position, new Vector3(horizontal * Acceleration, vertical * Acceleration),
             Color.yellow);
 
-        if (!Input.GetButton("Horizontal"))
+        if (horizontal > -0.001 && horizontal < 0.001)
         {
             float cmpSpeed = 0;
             if (atBoundsX)
@@ -55,7 +55,7 @@ public class UserMovement : MonoBehaviour
             _speedX += dtA * horizontal;
         }
 
-        if (!Input.GetButton("Vertical"))
+        if (vertical > -0.001 && vertical < 0.001)
         {
             _speedY = 0;
             if (_speedY < 0)

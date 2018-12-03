@@ -305,7 +305,7 @@ MonoBehaviour:
   BaseSpeed: 1
   MaxSpeed: 7
   Acceleration: 20
-  Deceleration: 20
+  Deceleration: 50
 --- !u!114 &114868495947405334
 MonoBehaviour:
   m_ObjectHideFlags: 1

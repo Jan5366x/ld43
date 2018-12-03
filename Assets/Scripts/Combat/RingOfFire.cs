@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RingOfFire : MonoBehaviour
 {
-    public float Angle;
+    public float Angle = 5;
+    public float Distance = 3;
     public Transform Projectile;
 
     // Use this for initialization
@@ -12,7 +13,9 @@ public class RingOfFire : MonoBehaviour
     {
         for (float angle = 0; angle < 360; angle += Angle)
         {
-            var obj = Instantiate(Projectile, transform.position, Quaternion.identity);
+            var quat = Quaternion.AngleAxis(angle, Vector3.forward);
+            var pos = transform.position + Distance * (quat * Vector3.right);
+            var obj = Instantiate(Projectile, pos, Quaternion.identity);
             var movement = obj.GetComponent<LinearMovement>();
             if (movement)
             {
@@ -20,13 +23,8 @@ public class RingOfFire : MonoBehaviour
             }
             else
             {
-                obj.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+                obj.transform.rotation = quat;
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }
