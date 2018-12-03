@@ -178,14 +178,14 @@ MonoBehaviour:
   - FrequencyMin: 100
     FrequencyMax: 200
     Prefab: {fileID: 4658496552270958, guid: b4e2bb60dc6fb42708d514d57778f086, type: 2}
-  - FrequencyMin: 5
-    FrequencyMax: 20
+  - FrequencyMin: 20
+    FrequencyMax: 30
     Prefab: {fileID: 4104397153436826, guid: 17d4a3633f71f4660bf38492b27bb55e, type: 2}
-  - FrequencyMin: 5
-    FrequencyMax: 20
+  - FrequencyMin: 30
+    FrequencyMax: 50
     Prefab: {fileID: 4127122409043158, guid: 390bc1c5df29d4270aeb67fa0abe45fb, type: 2}
-  - FrequencyMin: 1
-    FrequencyMax: 5
+  - FrequencyMin: 10
+    FrequencyMax: 30
     Prefab: {fileID: 4128630786165800, guid: 566b1a71f6edb45fdace6c3ce8126c7a, type: 2}
   - FrequencyMin: 1
     FrequencyMax: 5
