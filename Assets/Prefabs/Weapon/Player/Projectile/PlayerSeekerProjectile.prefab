@@ -185,6 +185,7 @@ MonoBehaviour:
   Speed: 10
   Range: 10
   TurningAngle: 90
+  IsPlayer: 1
 --- !u!212 &212509869948480238
 SpriteRenderer:
   m_ObjectHideFlags: 1

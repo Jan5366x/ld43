@@ -135,7 +135,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamagePlayer: 0
   DamageEnemies: 1
-  Damage: 10
+  Damage: 20
   ImpactPrefab: {fileID: 0}
 --- !u!114 &114748898286964468
 MonoBehaviour:

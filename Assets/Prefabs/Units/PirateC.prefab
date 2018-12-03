@@ -56,9 +56,9 @@ GameObject:
   - component: {fileID: 114807367261322506}
   - component: {fileID: 50244437399311254}
   - component: {fileID: 114244110514463286}
-  - component: {fileID: 114876170210354676}
   - component: {fileID: 95547092100638990}
   - component: {fileID: 60898893251278350}
+  - component: {fileID: 114279069063058324}
   m_Layer: 0
   m_Name: PirateC
   m_TagString: Untagged
@@ -292,6 +292,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1942b85293c981542803e1093d98919e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114279069063058324
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1600685312351868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724ed3c1920d43019aa824f8bc5947a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MovementSpeed: -0.2
 --- !u!114 &114600332940713492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,8 +315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 396a65fe3f5d470aa73cc4b2fc542ac1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Projectile: {fileID: 4289226547387300, guid: 6faa610f9d85c6a449fe67d1a97f0d73, type: 2}
-  FireRate: 1
+  Projectile: {fileID: 4782529558300924, guid: 47a88f14dee5b4308a5b034bd6bdc4a1, type: 2}
+  FireRate: 3
 --- !u!114 &114807367261322506
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,26 +331,13 @@ MonoBehaviour:
   MaxArmor: 50
   CurrentArmor: 50
   ArmorRegeneration: 0
-  MaxShield: 100
-  CurrentShield: 100
-  ShieldRegeneration: 0
-  Reward: 1
+  MaxShield: 300
+  CurrentShield: 300
+  ShieldRegeneration: 2
+  Reward: 50
   DestructionPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
     type: 2}
   IsPlayer: 0
---- !u!114 &114876170210354676
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1600685312351868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 358b93bc542cd4de682db9d3385f4b5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpeedX: 0.5
-  SpeedY: 0.8
 --- !u!212 &212895621605160600
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -362,8 +362,8 @@ MonoBehaviour:
   ArmorRegeneration: 0
   MaxShield: 100
   CurrentShield: 100
-  ShieldRegeneration: 0
-  Reward: 1
+  ShieldRegeneration: 2
+  Reward: 50
   DestructionPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
     type: 2}
   IsPlayer: 0

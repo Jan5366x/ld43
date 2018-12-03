@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724ed3c1920d43019aa824f8bc5947a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: -1
+  MovementSpeed: -0.5
 --- !u!114 &114446407816887894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,7 +215,7 @@ MonoBehaviour:
   MaxShield: 0
   CurrentShield: 0
   ShieldRegeneration: 0
-  Reward: 1
+  Reward: 2
   DestructionPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
     type: 2}
   IsPlayer: 0
