@@ -17,6 +17,7 @@ public class PickupItem : MonoBehaviour
     public int EnergyDeltaMax;
     public int EnergyDeltaRegen;
     public Transform Item;
+    public Transform Effect;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,6 +28,8 @@ public class PickupItem : MonoBehaviour
         updateArmor(other);
         updateEnergy(other);
         updateScore(other);
+
+        triggerEffect(other);
 
         Destroy(gameObject);
     }
@@ -80,6 +83,12 @@ public class PickupItem : MonoBehaviour
         w.MaxEnergy = Mathf.Max(w.MaxEnergy + EnergyDeltaMax, 0);
         w.EnergyRegeneration = Mathf.Max(w.EnergyRegeneration + EnergyDeltaRegen, 0);
         w.CurrentEnergy = Mathf.Clamp(w.CurrentEnergy + EnergyDelta, 0, w.MaxEnergy);
+    }
+
+    private void triggerEffect(Component other)
+    {
+        if (!Effect) return;
+        Instantiate(Effect, other.transform.position, Quaternion.identity);
     }
 
     private void updateScore(Component other)

@@ -136,6 +136,7 @@ MonoBehaviour:
   EnergyDeltaMax: 0
   EnergyDeltaRegen: 0
   Item: {fileID: 0}
+  Effect: {fileID: 0}
 --- !u!212 &212257004446900872
 SpriteRenderer:
   m_ObjectHideFlags: 1
