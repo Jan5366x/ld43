@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 724ed3c1920d43019aa824f8bc5947a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: -4
+  MovementSpeed: -6
 --- !u!114 &114865409780090918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamagePlayer: 1
   DamageEnemies: 0
-  Damage: 35
+  Damage: 40
   ImpactPrefab: {fileID: 0}
 --- !u!212 &212744335211474100
 SpriteRenderer:
