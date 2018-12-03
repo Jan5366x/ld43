@@ -136,6 +136,7 @@ MonoBehaviour:
   EnergyDeltaMax: 0
   EnergyDeltaRegen: 0
   Item: {fileID: 4934990938140696, guid: de1c6ad7b2e494894b2ee26a1a015070, type: 2}
+  Effect: {fileID: 0}
 --- !u!212 &212388713401434806
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -172,7 +173,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 162cd62ee5eb51c4ba16311fa1525a04, type: 3}
-  m_Color: {r: 0.3160377, g: 0.6320754, b: 0.32430196, a: 1}
+  m_Color: {r: 0.19802423, g: 0.8396226, b: 0.21406424, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
