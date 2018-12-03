@@ -46,7 +46,7 @@ public class SeekerMovement : MonoBehaviour
         Vector3 dist = targetPosition - transform.position;
         float angle = Mathf.Rad2Deg * Mathf.Atan2(dist.y, dist.x);
         angle = Mathf.DeltaAngle(_angle, angle);
-        angle = Mathf.Clamp(angle, -TurningAngle*dt, TurningAngle*dt);
+        angle = Mathf.Clamp(angle, -TurningAngle * dt, TurningAngle * dt);
         _angle += angle;
 
 
@@ -74,7 +74,7 @@ public class SeekerMovement : MonoBehaviour
         for (int idx = 0; idx < allEnemies.Length; idx++)
         {
             var enemy = allEnemies[idx];
-            if (enemy.IsPlayer != IsPlayer || enemy.IsDead())
+            if (enemy.IsPlayer == IsPlayer || enemy.IsDead())
             {
                 continue;
             }

@@ -47,35 +47,39 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(Random.Range(item.FrequencyMin, item.FrequencyMax));
             SpawnAtBouds(_camera.OrthographicBounds(), item.Prefab);
         }
-
     }
+
     IEnumerator SpawnDelayed()
     {
-        LoadCamera();
-        int widx = 0;
-        foreach (var wave in Waves)
+        for (int cycle = 0;; cycle++)
         {
-            if (wave.spawnWhenEmpty)
+            LoadCamera();
+            foreach (var wave in Waves)
             {
-                while (FindObjectsOfType<EnemyWeapon>().Length > 0)
+                if (wave.spawnWhenEmpty)
                 {
-                    yield return new WaitForSeconds(1);
+                    while (FindObjectsOfType<EnemyWeapon>().Length > 0)
+                    {
+                        yield return new WaitForSeconds(1);
+                    }
+                }
+
+                yield return new WaitForSeconds(wave.delay);
+                Bounds bounds = _camera.OrthographicBounds();
+
+                float multiplier = Mathf.Clamp(Mathf.Pow(1.5f, cycle), 0, 3);
+
+                foreach (var waveEntry in wave.enemies)
+                {
+                    int minCnt = (int) Mathf.Min(waveEntry.MinCount * multiplier, 5);
+                    int maxCnt = (int) Mathf.Min(waveEntry.MaxCount * multiplier, 10);
+                    int cnt = Random.Range(minCnt, maxCnt);
+                    for (int i = 0; i < cnt; i++)
+                    {
+                        SpawnAtBouds(bounds, waveEntry.enemy);
+                    }
                 }
             }
-
-            yield return new WaitForSeconds(wave.delay);
-            Bounds bounds = _camera.OrthographicBounds();
-
-            foreach (var waveEntry in wave.enemies)
-            {
-                int cnt = Random.Range(waveEntry.MinCount, waveEntry.MaxCount);
-                for (int i = 0; i < cnt; i++)
-                {
-                    SpawnAtBouds(bounds, waveEntry.enemy);
-                }
-            }
-
-            widx++;
         }
     }
 
