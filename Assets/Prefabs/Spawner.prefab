@@ -111,15 +111,42 @@ MonoBehaviour:
       MaxCount: 5
     delay: 0
     spawnWhenEmpty: 1
-  - enemies: []
+  - enemies:
+    - enemy: {fileID: 4096717133974140, guid: fcc432247877d4494b04914e8ab0af4c, type: 2}
+      MinCount: 3
+      MaxCount: 5
+    - enemy: {fileID: 4248575575902444, guid: 493fcc433046a44a0a6f48fe0c0a8ef2, type: 2}
+      MinCount: 5
+      MaxCount: 7
     delay: 0
-    spawnWhenEmpty: 0
-  - enemies: []
+    spawnWhenEmpty: 1
+  - enemies:
+    - enemy: {fileID: 4341895008901748, guid: 497ada030e11745d9b427f0fcb6a9418, type: 2}
+      MinCount: 2
+      MaxCount: 5
+    - enemy: {fileID: 4378786357325290, guid: 5fb2ccb9182c0429a8d91538465ef898, type: 2}
+      MinCount: 2
+      MaxCount: 3
+    - enemy: {fileID: 4241357520110554, guid: d473a0c09e063469dabf0e3d6c5b2cfa, type: 2}
+      MinCount: 5
+      MaxCount: 7
     delay: 0
-    spawnWhenEmpty: 0
-  - enemies: []
+    spawnWhenEmpty: 1
+  - enemies:
+    - enemy: {fileID: 4441316156481426, guid: 4cf56eeb89f193c4c8482abb3fd7fd54, type: 2}
+      MinCount: 4
+      MaxCount: 6
+    - enemy: {fileID: 4536276298290308, guid: 5cbfd8c24a0564963becaa3d039ecbc6, type: 2}
+      MinCount: 2
+      MaxCount: 3
+    - enemy: {fileID: 4241357520110554, guid: d473a0c09e063469dabf0e3d6c5b2cfa, type: 2}
+      MinCount: 1
+      MaxCount: 2
+    - enemy: {fileID: 4378786357325290, guid: 5fb2ccb9182c0429a8d91538465ef898, type: 2}
+      MinCount: 1
+      MaxCount: 2
     delay: 0
-    spawnWhenEmpty: 0
+    spawnWhenEmpty: 1
   - enemies: []
     delay: 0
     spawnWhenEmpty: 0
