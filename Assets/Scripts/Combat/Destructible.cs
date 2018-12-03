@@ -56,8 +56,7 @@ namespace Combat
         {
             Vector3 spawnPos = transform.position;
 
-            Destroy(gameObject);
-
+           
             if (DestructionPrefab != null)
                 Instantiate(DestructionPrefab, spawnPos, Quaternion.identity);
 
@@ -70,6 +69,8 @@ namespace Combat
                     score.Score = Mathf.Max(0, score.Score + Reward);
                 }
             }
+            
+            Destroy(gameObject);
         }
 
         public void HealArmor(float value)
