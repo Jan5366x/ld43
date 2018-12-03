@@ -2,18 +2,19 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class BackgroundScroller : MonoBehaviour
 {
     public Transform Prefab;
+    public float Multiplier;
+
     private GameObject _player;
     private CameraHelper _camera;
 
     // Use this for initialization
     void Start()
     {
-        _player = GameObject.FindWithTag("Player");
-
         var camera = GameObject.FindWithTag("MainCamera");
         _camera = camera.GetComponent<CameraHelper>();
 
@@ -41,6 +42,13 @@ public class BackgroundScroller : MonoBehaviour
         if (maxRight <= camRight)
         {
             Spawn(maxRight);
+        }
+
+        if (Multiplier > 0)
+        {
+            _player = GameObject.FindWithTag("Player");
+            var userMovement = _player.GetComponent<UserMovement>();
+            transform.Translate(-Multiplier * userMovement.BaseSpeed, 0, 0);
         }
     }
 
