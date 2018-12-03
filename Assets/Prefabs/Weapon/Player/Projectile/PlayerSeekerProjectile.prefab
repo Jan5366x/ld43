@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 10
-  Range: 5
+  Range: 10
   TurningAngle: 90
 --- !u!212 &212509869948480238
 SpriteRenderer:
