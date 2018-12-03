@@ -12,6 +12,11 @@ public class SwitchToMainMenu : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+	}
+
+	public void GoMenu()
+	{
 		SceneManager.LoadScene("Scenes/MainMenu");
 	}
 }

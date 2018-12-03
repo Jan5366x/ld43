@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641287, b: 0.5748173, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -929,24 +929,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 114913326761256838, guid: 502004d60cb5f44678c4946dc8cdd4fd,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9e823d179feb44b408adc29d03d75550,
-        type: 3}
     - target: {fileID: 114191886162296666, guid: 502004d60cb5f44678c4946dc8cdd4fd,
         type: 2}
-      propertyPath: m_SpriteState.m_HighlightedSprite
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 21300000, guid: 9460c40c7dbad5743a38a7ba58c4b559,
-        type: 3}
-    - target: {fileID: 114191886162296666, guid: 502004d60cb5f44678c4946dc8cdd4fd,
-        type: 2}
-      propertyPath: m_SpriteState.m_PressedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 4e456a88f25ff1c40bba9827acffdde6,
-        type: 3}
+      objectReference: {fileID: 1860070043}
     - target: {fileID: 1926007888333044, guid: 502004d60cb5f44678c4946dc8cdd4fd, type: 2}
       propertyPath: m_Name
       value: PlayButton
@@ -1363,7 +1350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bbea8d9f6d94f16b6516108a936db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScene: 
+  MainScene: 
 --- !u!114 &955617653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2191,7 +2178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bbea8d9f6d94f16b6516108a936db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScene: 
+  MainScene: 
 --- !u!114 &1754795153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,7 +2369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47bbea8d9f6d94f16b6516108a936db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScene: 
+  MainScene: SampleScene
 --- !u!1 &1890637232
 GameObject:
   m_ObjectHideFlags: 0
