@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fb7e5312969445a9a8321562583eaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedX: 5
-  SpeedY: 5
+  Speed: 10
   Range: 5
+  TurningAngle: 90
 --- !u!212 &212509869948480238
 SpriteRenderer:
   m_ObjectHideFlags: 1
