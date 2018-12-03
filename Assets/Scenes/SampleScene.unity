@@ -120,11 +120,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.size
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 4119784585065712, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -157,70 +152,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[8].FrequencyMin
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[8].FrequencyMax
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[8].Prefab
-      value: 
-      objectReference: {fileID: 4104397153436826, guid: 17d4a3633f71f4660bf38492b27bb55e,
-        type: 2}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[9].FrequencyMin
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[9].FrequencyMax
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[9].Prefab
-      value: 
-      objectReference: {fileID: 4127122409043158, guid: 390bc1c5df29d4270aeb67fa0abe45fb,
-        type: 2}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[10].FrequencyMin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[10].FrequencyMax
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[10].Prefab
-      value: 
-      objectReference: {fileID: 4128630786165800, guid: 566b1a71f6edb45fdace6c3ce8126c7a,
-        type: 2}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[11].FrequencyMin
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[11].FrequencyMax
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114714938076684860, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf,
-        type: 2}
-      propertyPath: Items.Array.data[11].Prefab
-      value: 
-      objectReference: {fileID: 4283974911437176, guid: c089cda28865c42339096fd1c9244415,
-        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad7fcd7f278f94bd3b0829b7de3b5bdf, type: 2}
   m_IsPrefabAsset: 0
