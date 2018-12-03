@@ -304,7 +304,7 @@ MonoBehaviour:
   BaseSpeed: 1
   MaxSpeed: 7
   Acceleration: 20
-  Deceleration: 50
+  Deceleration: 20
 --- !u!114 &114868495947405334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,6 +348,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7940b391a27cf4823854f4336c72009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PreviewSprite: {fileID: 0}
+  PreviewColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &212017705566643880
 SpriteRenderer:
   m_ObjectHideFlags: 1
