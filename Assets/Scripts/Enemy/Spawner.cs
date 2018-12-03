@@ -58,7 +58,7 @@ public class Spawner : MonoBehaviour
             {
                 if (wave.spawnWhenEmpty)
                 {
-                    while (FindObjectsOfType<EnemyWeapon>().Length > 0)
+                    while (FindObjectsOfType<EnemyWeapon>().Length > 1)
                     {
                         yield return new WaitForSeconds(1);
                     }
