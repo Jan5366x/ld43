@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Combat
 {
     public class PlayerWeapon : MonoBehaviour
     {
         public Transform Projectile;
+        public Sprite WeaponPreview;
+        public Color WeaponColor;
+        
         public int ProjectileCount = 1;
         public float ProjectileAngle = 15;
 
