@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50831997744611450}
   - component: {fileID: 114675444721356122}
   - component: {fileID: 58654254850346118}
+  - component: {fileID: 114181158352546212}
   m_Layer: 0
   m_Name: EnemyShotSeeker
   m_TagString: Untagged
@@ -143,6 +144,26 @@ MonoBehaviour:
   DamageEnemies: 0
   Damage: 40
   ImpactPrefab: {fileID: 0}
+--- !u!114 &114181158352546212
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992564206615614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28635f9919d64d60a4fb774fee847ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxArmor: 1
+  CurrentArmor: 1
+  ArmorRegeneration: 0
+  MaxShield: 0
+  CurrentShield: 0
+  ShieldRegeneration: 0
+  Reward: 10
+  DestructionPrefab: {fileID: 0}
+  IsPlayer: 0
 --- !u!114 &114193618422120580
 MonoBehaviour:
   m_ObjectHideFlags: 1

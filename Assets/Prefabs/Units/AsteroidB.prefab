@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamagePlayer: 1
   DamageEnemies: 0
-  Damage: 10
+  Damage: 50
   ImpactPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
     type: 2}
 --- !u!114 &114119846851707620
@@ -223,7 +223,7 @@ MonoBehaviour:
   MaxShield: 0
   CurrentShield: 0
   ShieldRegeneration: 0
-  Reward: 3
+  Reward: 30
   DestructionPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
     type: 2}
   IsPlayer: 0

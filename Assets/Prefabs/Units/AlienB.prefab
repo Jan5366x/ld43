@@ -328,7 +328,7 @@ MonoBehaviour:
   MaxShield: 40
   CurrentShield: 40
   ShieldRegeneration: 1
-  Reward: 30
+  Reward: 300
   DestructionPrefab: {fileID: 4478121537197154, guid: 52695de37743feb42bd2c216c2f9a2b8,
     type: 2}
   IsPlayer: 0
