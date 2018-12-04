@@ -86,7 +86,10 @@ public class Spawner : MonoBehaviour
     void SpawnAtBouds(Bounds bounds, Transform prefab)
     {
         float spawnX = Random.Range(bounds.max.x, bounds.max.x + bounds.extents.x * 2f);
-        float spawnY = Random.Range(bounds.min.y, bounds.max.y);
+
+        float maxY = bounds.max.y - 0.2f * bounds.extents.y;
+        float minY = bounds.min.y + 0.2f * bounds.extents.y;
+        float spawnY = Random.Range(minY, maxY);
         Instantiate(prefab, new Vector3(spawnX, spawnY), Quaternion.identity);
     }
 }

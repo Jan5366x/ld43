@@ -480,6 +480,28 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114829743722313174, guid: 64a6cd53d677c41a4a05486832c74938,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114445091484784254, guid: 64a6cd53d677c41a4a05486832c74938,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134124882254160, guid: 64a6cd53d677c41a4a05486832c74938, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124402039073002, guid: 64a6cd53d677c41a4a05486832c74938, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1643431073830106, guid: 64a6cd53d677c41a4a05486832c74938, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64a6cd53d677c41a4a05486832c74938, type: 2}
   m_IsPrefabAsset: 0

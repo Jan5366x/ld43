@@ -37,7 +37,6 @@ public class PickupInfo : MonoBehaviour
             {
                 var color = label.color;
                 var a = Mathf.Clamp(1 - dt / Duration, 0, 1);
-                Debug.Log("+++++" + a);
                 color.a = a;
                 label.color = color;
             }
@@ -68,7 +67,7 @@ public class PickupInfo : MonoBehaviour
             if (label.name == "Text")
             {
                 label.text = text;
-                label.color = Color.black;
+                label.color = Color.white;
             }
             else if (label.name == "Delta")
             {
