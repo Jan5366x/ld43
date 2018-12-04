@@ -16,7 +16,10 @@ namespace UI
         // Update is called once per frame
         private void Update()
         {
-            var playerWeapon = GameObject.FindWithTag("Player").GetComponentInChildren<PlayerWeapon>();
+            var player = GameObject.FindWithTag("Player");
+            if(!player) return;
+            
+            var playerWeapon = player.GetComponentInChildren<PlayerWeapon>();
             var weaponPreview = playerWeapon.WeaponPreview;
             var weaponColor = playerWeapon.WeaponColor;
 

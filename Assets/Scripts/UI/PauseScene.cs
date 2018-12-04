@@ -35,7 +35,7 @@ public class PauseScene : MonoBehaviour
         }
     }
 
-    void Toggle()
+    public void Toggle()
     {
         _paused = !_paused;
         Time.timeScale = _paused ? 1f : 0f;

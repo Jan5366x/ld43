@@ -15,7 +15,10 @@ public class PickupPanel : MonoBehaviour {
 	// Update is called once per frame
 	private void Update()
 	{
-		var triggerEffect = GameObject.FindWithTag("Player").GetComponentInChildren<TriggerEffect>();
+		var player = GameObject.FindWithTag("Player");
+		if (!player) return;
+		
+		var triggerEffect = player.GetComponentInChildren<TriggerEffect>();
 		var weaponPreview = triggerEffect.PreviewSprite;
 		var weaponColor = triggerEffect.PreviewColor;
 

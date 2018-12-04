@@ -19,4 +19,10 @@ public class SwitchToMainMenu : MonoBehaviour {
 	{
 		SceneManager.LoadScene("Scenes/MainMenu");
 	}
+	
+	public void RestartGame()
+	{
+		Time.timeScale = 1.0f;
+		SceneManager.LoadScene("Scenes/SampleScene");
+	}
 }
