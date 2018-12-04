@@ -68,9 +68,14 @@ namespace Combat
                     var score = player.GetComponent<ScoreCounter>();
                     score.Score = Mathf.Max(0, score.Score + Reward);
                 }
+                Destroy(gameObject);
             }
-            
-            Destroy(gameObject);
+            else
+            {
+                var deathpanel = GameObject.FindGameObjectWithTag("DeathPanel");
+                deathpanel.GetComponent<DeathScene>().Toggle();
+                gameObject.SetActive(false);
+            }
         }
 
         public void HealArmor(float value)

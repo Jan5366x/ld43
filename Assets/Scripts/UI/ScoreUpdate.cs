@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ScoreUpdate : MonoBehaviour
 {
+    private int _score;
+
     // Use this for initialization
     void Start()
     {
@@ -13,14 +15,23 @@ public class ScoreUpdate : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        var text = GetComponent<TextMeshPro>();
         var player = GameObject.FindGameObjectWithTag("Player");
-        if (!player) return;
-        var score = player.GetComponent<ScoreCounter>();
-        if (!score) return;
-        if (text)
+        if (player)
         {
-            text.text = "Score: " + score.Score;
+            var score = player.GetComponent<ScoreCounter>();
+            if (score)
+            {
+                _score = score.Score;
+            }
+        }
+
+        var texts = GetComponentsInChildren<TextMeshProUGUI>();
+        foreach (var text in texts)
+        {
+            if (text.name == "Score")
+            {
+                text.text = "Score: " + _score;
+            }
         }
     }
 }
