@@ -10,7 +10,11 @@ public class RingOfFire : MonoBehaviour
 
     // Use this for initialization
     void Start()
-    {
+    {     
+        
+        // spawn sound effect
+        Instantiate(Resources.Load("Sound/FireSoundHelper"));
+        
         for (float angle = 0; angle < 360; angle += Angle)
         {
             var quat = Quaternion.AngleAxis(angle, Vector3.forward);

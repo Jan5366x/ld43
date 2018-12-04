@@ -26,7 +26,7 @@ public class PickupItem : MonoBehaviour
 
     private void Start()
     {
-        _rend =  GetComponentInChildren<SpriteRenderer>();;
+        _rend =  GetComponentInChildren<SpriteRenderer>();
         _audioData = GetComponent<AudioSource>();
     }
 

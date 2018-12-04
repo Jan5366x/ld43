@@ -3,6 +3,7 @@ using UnityEngine.Serialization;
 
 namespace Combat
 {
+   
     public class PlayerWeapon : MonoBehaviour
     {
         public Transform Projectile;
@@ -19,6 +20,7 @@ namespace Combat
         public float RequiredEnergy = 2F;
 
         private float _fireRateCounter = 0F;
+        
 
         private void Update()
         {
@@ -41,6 +43,10 @@ namespace Combat
         {
             if (Projectile != null)
             {
+                // spawn sound effect
+                Instantiate(Resources.Load("Sound/FireSoundHelper"));
+                
+                // do actual fire logic
                 for (int i = 0; i < ProjectileCount; i++)
                 {
                     var obj = Instantiate(Projectile, transform.position, Quaternion.identity);
