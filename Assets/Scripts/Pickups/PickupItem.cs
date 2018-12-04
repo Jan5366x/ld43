@@ -1,9 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Combat;
 using UnityEngine;
 using UnityEngine.Serialization;
 
+[RequireComponent(typeof(AudioSource))]
 public class PickupItem : MonoBehaviour
 {
     public int ShieldDelta;
@@ -18,11 +20,23 @@ public class PickupItem : MonoBehaviour
     public int EnergyDeltaRegen;
     public Transform Item;
     public Transform Effect;
+    
+    private SpriteRenderer _rend;
+    private AudioSource _audioData;
+
+    private void Start()
+    {
+        _rend =  GetComponentInChildren<SpriteRenderer>();;
+        _audioData = GetComponent<AudioSource>();
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (!isPlayer(other)) return;
-
+        if (!isPlayer(other) || !_rend.enabled) return;
+        
+        
+        
+        // handle pickup item
         updateWeapon(other);
         updateShields(other);
         updateArmor(other);
@@ -31,7 +45,10 @@ public class PickupItem : MonoBehaviour
 
         storeEffect(other);
 
-        Destroy(gameObject);
+        // trigger audio and prepare destruction
+        _audioData.Play();
+        _rend.enabled = false;
+        Destroy(gameObject, _audioData.clip.length);
     }
 
     private void updateWeapon(Component other)
