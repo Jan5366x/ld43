@@ -53,4 +53,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Angle: 20
   Distance: 1
-  Projectile: {fileID: 4479076747741306, guid: 0830b36d9fa6fba4ca392dce575bea94, type: 2}
+  Projectile: {fileID: 4678555975893806, guid: b630053d990a14eef8696ee4a978aa50, type: 2}
