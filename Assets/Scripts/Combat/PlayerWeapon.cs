@@ -31,7 +31,7 @@ namespace Combat
                 CurrentEnergy = Mathf.Min(CurrentEnergy + (EnergyRegeneration * Time.deltaTime), MaxEnergy);
 
             // shot if conditions are ok
-            if (Input.GetButton("Fire1") && _fireRateCounter >= FireRate && RequiredEnergy <= CurrentEnergy)
+            if (Input.GetButton("PrimaryFire") && _fireRateCounter >= FireRate && RequiredEnergy <= CurrentEnergy)
             {
                 Fire();
                 _fireRateCounter = 0F;

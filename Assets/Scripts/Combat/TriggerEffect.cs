@@ -21,7 +21,7 @@ public class TriggerEffect : MonoBehaviour
     void Update()
     {
         if (_wasTriggered) return;
-        if (Input.GetButtonDown("Fire3") && _effect)
+        if (Input.GetButtonDown("UseSpecialItem") && _effect)
         {
             _wasTriggered = true;
             Instantiate(_effect, transform.position, Quaternion.identity);
